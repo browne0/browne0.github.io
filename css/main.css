@@ -19,6 +19,7 @@
 	font-size: 25px;
 	padding: 32px 60px; /* Will need to change for responsive to 32px 15px */ 
 	font-weight: 300;
+	text-decoration: none;
 }
 
 .navbar .navbar-brand {
