@@ -13,6 +13,10 @@ a, a:focus, a:hover {
     transition: all .4s;
 }
 
+#skrollr-body {
+	min-height: 1px;
+}
+
 /* NAVBAR CSS */
 
 .navbar {
