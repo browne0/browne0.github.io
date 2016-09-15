@@ -115,13 +115,17 @@ a, a:focus, a:hover {
 	text-align: right;
 }
 
+.socialwrapper {
+	width: 100%;
+	margin-top: 100px;
+}
+
 .social {
 	text-align: center;
-	margin-top: 15px;
 }
 
 .social a {
-	
+	text-align: center;
 	display: inline-block;
     width: 64px;
     height: 64px;
@@ -135,6 +139,15 @@ a, a:focus, a:hover {
     color: rgb(56, 56, 56);
     line-height: 28px;
 }
+
+.social a i {
+	/*display:inline-block;
+	position: relative;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);*/
+}
+
 .social a:hover {
 	outline: 0;
 	background-color: rgb(245, 245, 245);
