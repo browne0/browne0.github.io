@@ -28,10 +28,6 @@ typer('.typertext', 45)
     	mobileCheck = function() {
     		return false;
 		}
-        render: function(data) {
-            //Debugging - Log the current scroll position.
-            // console.log(data.curTop);
-        }
     });
 } )( jQuery );
 
