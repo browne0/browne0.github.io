@@ -17,4 +17,4 @@ typer('.typertext', 55)
 	.pause(5000)
 	.empty()
 	.pause(300)
-	.continue("Web Developer, iOS Developer, Designer, Photographer. The story continues,");
+	.continue("Web Developer, iOS Developer, Designer, Photographer. The story continues!");
