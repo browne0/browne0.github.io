@@ -25,6 +25,9 @@ typer('.typertext', 45)
     // Init Skrollr
     var s = skrollr.init({
     	forceHeight: false,
+    	mobileCheck = function() {
+    		return (/Android|iPhone|iPad|iPod|BlackBerry/i).test(navigator.userAgent || navigator.vendor || window.opera);
+		}
         render: function(data) {
             //Debugging - Log the current scroll position.
             // console.log(data.curTop);
