@@ -25,7 +25,7 @@ typer('.typertext', 45)
     // Init Skrollr
     var s = skrollr.init({
     	forceHeight: false,
-    	mobileCheck = function() {
+    	mobileCheck: function() {
     		return false;
 		}
     });
