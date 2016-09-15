@@ -25,10 +25,17 @@ typer('.typertext', 45)
     // Init Skrollr
     var s = skrollr.init({
     	forceHeight: false,
-    	return false
         render: function(data) {
             //Debugging - Log the current scroll position.
             // console.log(data.curTop);
         }
     });
 } )( jQuery );
+
+// Hotfix: Realign navbar logo when button is pressed
+$(".navbar-toggle").on("click", function(){
+	if ($('.navbar-toggle').attr('aria-expanded') === "false") {
+		$(".navbar-toggle ~ a").toggleClass("onMobileBrand");
+   		$(".navbar-toggle").toggleClass("onMobileButton");
+	}
+});
