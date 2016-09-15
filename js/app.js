@@ -31,3 +31,9 @@ typer('.typertext', 45)
         }
     });
 } )( jQuery );
+
+if(!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
+	    	var s = skrollr.init({
+	        	forceHeight: false
+    		});
+		}
