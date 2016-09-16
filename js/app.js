@@ -83,7 +83,7 @@ $(document).ready(function() {
 		var workpos = works.offset();                   
 		$(window).scroll(function() {
 			var windowpos = $(window).scrollTop();
-			// console.log("Scroll position: " + windowpos);
+			console.log("Scroll position: " + windowpos);
 			// console.log("Distance to bottom " + $(window).scrollBottom());
 			if (windowpos > workpos.top - nav ) {
 				works.addClass("stick");
