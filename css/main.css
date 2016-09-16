@@ -158,11 +158,13 @@ a, a:focus, a:hover {
 #about .leftcont {
 	height: 100vh;
 	background-color: rgba(95, 95, 95, .5);
+	z-index: 3;
 }
 
 #about .rightcont {
 	background-color: rgb(245, 245, 245);
 	height: 300vh;
+	z-index: 2;
 }
 
 #about h1 {
@@ -170,7 +172,17 @@ a, a:focus, a:hover {
 	font-size: 90px;
 	font-family: Hallo Sans;
 	margin: 0px;
-	padding-top: 20%;
+	padding-top: 28%;
+	border-top: 1px solid black;
+}
+
+.selfie {
+	display: inline-block;
+	position: absolute;
+	top: 115px;
+	right: -75px;
+	max-width: 150px;
+	max-height: 193px;
 }
 
 /* WORK CSS */
@@ -283,6 +295,14 @@ a, a:focus, a:hover {
 
 	.navbar li a {
 		padding: 20px 30px;
+	}
+
+	#about h1 {
+		padding-top: 35%;
+	}
+
+	#work h1 {
+		padding-top: 35%;
 	}
 }
 
