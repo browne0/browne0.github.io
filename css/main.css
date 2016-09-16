@@ -155,12 +155,6 @@ a, a:focus, a:hover {
 }
 /* ABOUT CSS */
 
-#about {
-	background: transparent;
-	overflow: hidden;
-	position: relative;
-}
-
 #about .leftcont {
 	height: 100vh;
 	background-color: rgba(95, 95, 95, .5);
@@ -168,7 +162,7 @@ a, a:focus, a:hover {
 
 #about .rightcont {
 	background-color: rgb(245, 245, 245);
-	height: 150vh;
+	height: 300vh;
 }
 
 #about h1 {
@@ -181,10 +175,6 @@ a, a:focus, a:hover {
 
 /* WORK CSS */
 
-#work {
-	background: transparent;
-}
-
 #work .leftcont {
 	height: 100vh;
 	background-color: rgb(245, 245, 245);
@@ -192,7 +182,7 @@ a, a:focus, a:hover {
 
 #work .rightcont {
 	background-color: blue;
-	height: 150vh;
+	height: 300vh;
 }
 
 #work h1 {
@@ -212,8 +202,10 @@ a, a:focus, a:hover {
 
 #about, #work {
 	min-height: 100vh;
-	z-index: 1;
-	position: relative;
+	z-index: 2;
+	background: transparent;
+	height: auto;
+	overflow: hidden;
 }
 
 #contact {

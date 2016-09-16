@@ -83,6 +83,17 @@ $(document).ready(function() {
 		var windowpos = $(window).scrollTop();
 		// console.log("Scroll position: " + windowpos);
 		// console.log("Distance to bottom " + $(window).scrollBottom());
+		if (windowpos > workpos.top - nav ) {
+			works.addClass("stick");
+			works.removeClass("sticky-fix");
+		} else {
+			works.removeClass("stick");
+		}
+
+		if ($(window).scrollBottom() <= $('#contact').height()) {
+			works.removeClass("stick");
+			works.addClass("sticky-fix");
+		}
 		if (windowpos >= aboutpos.top - nav ) {
 			abouts.addClass("stick");
 			abouts.removeClass("sticky-fix");
@@ -90,24 +101,9 @@ $(document).ready(function() {
 			abouts.removeClass("stick");
 		}
 
-		if ($(window).scrollBottom() <= $('#about').height() + $('#contact').height()) {
+		if ($(window).scrollBottom() <= $('#work').height() + $('#contact').height()) {
 			abouts.removeClass("stick");
 			abouts.addClass("sticky-fix");
 		}
-
-		if (windowpos > works.offset().top){
-			if (windowpos >= workpos.top - nav ) {
-				works.addClass("stick");
-				works.removeClass("sticky-fix");
-			} else {
-				works.removeClass("stick");
-			}
-
-			if ($(window).scrollBottom() <= $('#work').height() + $('#contact').height()) {
-				works.removeClass("stick");
-				works.addClass("sticky-fix");
-			}
-		}
-
 	});
 });
