@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
 	<meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
@@ -19,13 +20,13 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">Malik Browne</a>
+				<a class="navbar-brand link" href="#home">Malik Browne</a>
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#about">ABOUT</a></li>
-					<li><a href="#work">WORK</a></li>
-					<li><a href="#contact">CONTACT</a></li>
+					<li><a href="#about" class="link">ABOUT</a></li>
+					<li><a href="#work" class="link">WORK</a></li>
+					<li><a href="#contact" class="link">CONTACT</a></li>
 					<!-- <li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
 						<ul class="dropdown-menu">
@@ -44,37 +45,40 @@
 	</nav>
 	<div id="skrollr-body">
 		<section id="home" class="page">
-			
-			<div class="infoWrapper" data-300-top="opacity: 1"
-			data-20-top="opacity: 0"
+			<div class="infoWrapper" data-200-top="opacity: 1"
+			data--80-top="opacity: 0"
 			data-anchor-target=".infoWrapper">
-			<div class="myInfo">
-				<p class="name">MALIK ALEXANDER BROWNE</p>
+				<div class="myInfo">
+					<p class="name">MALIK ALEXANDER BROWNE</p>
+				</div>
+				<div class="typerInfo">
+					<p class="typertext"></p>
+				</div>
+				<div class="social">
+					<a href="https://linkedin.com/in/malikbrowne"><i class="fa fa-linkedin"></i></a>
+					<a href="http://facebook.com/malik"><i class="fa fa-facebook"></i></a>
+					<a href="MalikBrowneResume.pdf"><i class="fa fa-file-text"></i></a>
+					<a href="https://www.instagram.com/thatflyguymalik/"><i class="fa fa-instagram"></i></a>
+					<a href="mailto:malik@beesdesign.net"><i class="fa fa-envelope-o"></i></a>
+				</div>	
 			</div>
-			<div class="typerInfo">
-				<p class="typertext"></p>
+			<div class="arrow_box"></div>
+		</section>
+		<section id="about"  class="page">
+			<div class="col-lg-6 col-md-12 leftcont" id="sticker">
+					<h1>About</h1>
 			</div>
-			
-
-			<div class="social">
-				<a href="https://linkedin.com/in/malikbrowne"><i class="fa fa-linkedin"></i></a>
-				<a href="http://facebook.com/malik"><i class="fa fa-facebook"></i></a>
-				<a href="MalikBrowneResume.pdf"><i class="fa fa-file-text"></i></a>
-				<a href="https://www.instagram.com/thatflyguymalik/"><i class="fa fa-instagram"></i></a>
-				<a href="mailto:malik@beesdesign.net"><i class="fa fa-envelope-o"></i></a>
+			<div class="col-lg-6 col-md-12 rightcont pull-right">
 			</div>
-
-			
-		</div>
-		
-		
-		<div class="arrow_box">
-		</div>
-	</section>
-	<section id="about"  class="page"></section>
-	<section id="work" class="page"></section>
-	<section id="contact" class="page"></section>
-</div>
+		</section>
+		<section id="work" class="page">
+			<div class="col-lg-6 col-md-12 leftcont" id="sticker">
+				<h1>Work</h1>
+			</div>
+			<div class="col-lg-6 col-md-12 rightcont pull-right"></div>
+		</section>
+		<section id="contact" class="page"></section>
+	</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src="js/skrollr.min.js"></script>
 <script src='js/typer.js'></script>

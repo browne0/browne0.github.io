@@ -1,3 +1,11 @@
+/* FONT FACES */
+
+@font-face {
+	font-family: Hallo Sans;
+	src: url(../fonts/HalloSans.otf);
+	font-weight: bold;
+}
+
 *{
 	margin: 0;
 	padding: 0;
@@ -6,7 +14,7 @@
 
 a, a:focus, a:hover {
 	text-decoration: none;
-    -o-transition: all .4s;
+	-o-transition: all .4s;
     -moz-transition: all .4s;
     -webkit-transition: all .4s;
     -ms-transition: all .4s;
@@ -27,6 +35,14 @@ a, a:focus, a:hover {
 	box-shadow: 2px 2px 5px -1px rgba(56,56,56,1);
 }
 
+.navbar li:hover {
+	-o-transition: all .4s;
+    -moz-transition: all .4s;
+    -webkit-transition: all .4s;
+    -ms-transition: all .4s;
+    transition: all .4s;
+}
+
 .navbar li a {
 	color: black;
 	font-size: 25px;
@@ -38,7 +54,7 @@ a, a:focus, a:hover {
 .navbar .navbar-brand {
 	font-size: 35px;
 	padding: 30px 0px;
-	color: #666262;
+	color: #E8780C;
 }
 
 /* PANEL CSS */
@@ -77,7 +93,7 @@ a, a:focus, a:hover {
 
 #home {
 	background-color: #E8780C;
-	height: 93vh;
+	height: 95vh;
 	display: inline-block;
 	position: relative;
 	z-index: 2;
@@ -91,7 +107,6 @@ a, a:focus, a:hover {
 	top: 50%;
 	left:50%;
 	transform: translate(-50%, -50%);
-	height:250px;
 }
 
 .name {
@@ -142,16 +157,51 @@ a, a:focus, a:hover {
 /* ABOUT CSS */
 
 #about {
-	background-color: rgba(95, 95, 95, 1);
-	-webkit-box-shadow: 2px 2px 5px -1px rgba(56,56,56,1);
-	-moz-box-shadow: 2px 2px 5px -1px rgba(56,56,56,1);
-	box-shadow: 2px 2px 5px -1px rgba(56,56,56,1);
+	background: transparent;
+	overflow: hidden;
+	position: relative;
+}
+
+#about .leftcont {
+	height: 100vh;
+	background-color: rgba(95, 95, 95, .5);
+}
+
+#about .rightcont {
+	background-color: rgb(245, 245, 245);
+	height: 150vh;
+}
+
+#about h1 {
+	text-align: center;
+	font-size: 90px;
+	font-family: Hallo Sans;
+	margin: 0px;
+	padding-top: 20%;
 }
 
 /* WORK CSS */
 
 #work {
-	background-color: rgb(245, 245, 245);
+	background: transparent;
+}
+
+#about .leftcont {
+	height: 100vh;
+	background-color: rgba(95, 95, 95, .5);
+}
+
+#work .rightcont {
+	background-color: blue;
+	height:150vh;
+}
+
+#work h1 {
+	text-align: center;
+	font-size: 90px;
+	font-family: Hallo Sans;
+	margin: 0px;
+	padding-top: 20%;
 }
 
 /* CONTACT CSS */
@@ -160,10 +210,30 @@ a, a:focus, a:hover {
 	background-color: rgba(95, 95, 95, .8);
 }
 
-#about, #work, #contact {
-	height: 100vh;
+#about, #work {
+	min-height: 100vh;
 	z-index: 1;
 	position: relative;
+}
+
+#contact {
+	min-height: 50vh;
+	z-index: 1;
+	position: relative;
+}
+
+/* Sticky shit */
+
+.stick {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index:10000;
+}
+
+.sticky-fix {
+	bottom: 0;
+	position: absolute;
 }
 
 @media only screen and (max-width: 768px) {

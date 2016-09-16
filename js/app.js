@@ -1,3 +1,7 @@
+$.fn.scrollBottom = function() { 
+  return $(document).height() - this.scrollTop() - this.height(); 
+};
+
 typer('.typertext', 45)
 	.cursor({blink: 'soft'})
 	.pause(500)
@@ -46,4 +50,62 @@ $(".navbar-toggle").on("click", function(){
 		$(".navbar-toggle ~ a").toggleClass("onMobileBrand");
    		$(".navbar-toggle").toggleClass("onMobileButton");
 	}
+});
+
+// Feature: Smooth Scrolling on navbar link clicks
+
+$(function() {
+  // This will select everything with the class smoothScroll
+  // This should prevent problems with carousel, scrollspy, etc...
+  $('.link').click(function() {
+    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000); // The number here represents the speed of the scroll in milliseconds
+        return false;
+      }
+    }
+  });
+});
+
+// Feature: Work and About Pages will stick until the end of page is reached
+$(document).ready(function() {
+    var abouts = $("#about #sticker");
+    var works = $('#work #sticker');
+    var nav = $(".navbar").height();
+    var aboutpos = abouts.offset(); 
+    var workpos = works.offset();                   
+    $(window).scroll(function() {
+        var windowpos = $(window).scrollTop();
+        // console.log("Distance from top:" + workpos.top + "<br />Scroll position: " + windowpos +"Distance to bottom " + $(window).scrollBottom());
+        if (windowpos >= aboutpos.top - nav ) {
+            abouts.addClass("stick");
+            abouts.removeClass("sticky-fix");
+        } else {
+        	abouts.removeClass("stick");
+        }
+
+        if ($(window).scrollBottom() <= $('#about').height()) {
+        	abouts.removeClass("stick");
+        	abouts.addClass("sticky-fix");
+        }
+
+        // if (windowpos >= workpos.top - nav ) {
+        //     abouts.addClass("stick");
+        //     abouts.removeClass("sticky-fix");
+        // } else {
+        // 	abouts.removeClass("stick");
+        // }
+
+        // if ($(window).scrollBottom() <= $('#work').height()) {
+        // 	abouts.removeClass("stick");
+        // 	abouts.addClass("sticky-fix");
+        // }
+
+        
+
+    });
 });
