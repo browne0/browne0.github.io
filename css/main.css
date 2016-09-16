@@ -66,7 +66,7 @@ a, a:focus, a:hover {
 
 /* ARROW CSS */
 
-.arrow_box {
+/*.arrow_box {
 	position: absolute;
 	background: #E8780C;
 	top: 100%;
@@ -87,19 +87,18 @@ a, a:focus, a:hover {
 	margin-left: -50px;
 	-webkit-filter: drop-shadow(0px 3px 1px rgba(45,45,45,.75));
 	filter: drop-shadow(0px 3px 1px rgba(45,45,45,.75));
-}
+}*/
 
 /* HOME CSS */
 
 #home {
 	background-color: #E8780C;
-	height: 95vh;
-	display: inline-block;
+	height: 100vh;
 	position: relative;
 	z-index: 2;
-	-webkit-box-shadow: 2px 3px 5px -1px rgba(45,45,45,1);
-	-moz-box-shadow: 2px 3px 5px -1px rgba(45,45,45,1);
-	box-shadow: 2px 3px 5px 0px rgba(45,45,45,1);
+	-webkit-box-shadow: 2px 3px 5px -1px rgba(45,45,45,.5);
+	-moz-box-shadow: 2px 3px 5px -1px rgba(45,45,45,.5);
+	box-shadow: 2px 3px 5px 0px rgba(45,45,45,.5);
 }
 
 #home .infoWrapper {
@@ -186,14 +185,14 @@ a, a:focus, a:hover {
 	background: transparent;
 }
 
-#about .leftcont {
+#work .leftcont {
 	height: 100vh;
-	background-color: rgba(95, 95, 95, .5);
+	background-color: rgb(245, 245, 245);
 }
 
 #work .rightcont {
 	background-color: blue;
-	height:150vh;
+	height: 150vh;
 }
 
 #work h1 {
@@ -208,6 +207,7 @@ a, a:focus, a:hover {
 
 #contact {
 	background-color: rgba(95, 95, 95, .8);
+	overflow: hidden;
 }
 
 #about, #work {
