@@ -74,36 +74,39 @@ $(function() {
 
 // Feature: Work and About Pages will stick until the end of page is reached
 $(document).ready(function() {
-	var abouts = $("#about #sticker");
-	var works = $('#work #sticker2');
-	var nav = $(".navbar").height();
-	var aboutpos = abouts.offset(); 
-	var workpos = works.offset();                   
-	$(window).scroll(function() {
-		var windowpos = $(window).scrollTop();
-		// console.log("Scroll position: " + windowpos);
-		// console.log("Distance to bottom " + $(window).scrollBottom());
-		if (windowpos > workpos.top - nav ) {
-			works.addClass("stick");
-			works.removeClass("sticky-fix");
-		} else {
-			works.removeClass("stick");
-		}
 
-		if ($(window).scrollBottom() <= $('#contact').height()) {
-			works.removeClass("stick");
-			works.addClass("sticky-fix");
-		}
-		if (windowpos >= aboutpos.top - nav ) {
-			abouts.addClass("stick");
-			abouts.removeClass("sticky-fix");
-		} else {
-			abouts.removeClass("stick");
-		}
+	if ($(window).width() > 769) {
+		var abouts = $("#about #sticker");
+		var works = $('#work #sticker2');
+		var nav = $(".navbar").height();
+		var aboutpos = abouts.offset(); 
+		var workpos = works.offset();                   
+		$(window).scroll(function() {
+			var windowpos = $(window).scrollTop();
+			// console.log("Scroll position: " + windowpos);
+			// console.log("Distance to bottom " + $(window).scrollBottom());
+			if (windowpos > workpos.top - nav ) {
+				works.addClass("stick");
+				works.removeClass("sticky-fix");
+			} else {
+				works.removeClass("stick");
+			}
 
-		if ($(window).scrollBottom() <= $('#work').height() + $('#contact').height()) {
-			abouts.removeClass("stick");
-			abouts.addClass("sticky-fix");
-		}
-	});
+			if ($(window).scrollBottom() <= $('#contact').height()) {
+				works.removeClass("stick");
+				works.addClass("sticky-fix");
+			}
+			if (windowpos >= aboutpos.top - nav ) {
+				abouts.addClass("stick");
+				abouts.removeClass("sticky-fix");
+			} else {
+				abouts.removeClass("stick");
+			}
+
+			if ($(window).scrollBottom() <= $('#work').height() + $('#contact').height()) {
+				abouts.removeClass("stick");
+				abouts.addClass("sticky-fix");
+			}
+		});
+	}
 });
