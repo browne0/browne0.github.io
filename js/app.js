@@ -75,7 +75,7 @@ $(function() {
 // Feature: Work and About Pages will stick until the end of page is reached
 $(document).ready(function() {
 
-	if ($(window).width() > 769) {
+	if ($(window).width() > 800) {
 		var abouts = $("#about #sticker");
 		var works = $('#work #sticker2');
 		var nav = $(".navbar").height();
@@ -83,8 +83,8 @@ $(document).ready(function() {
 		var workpos = works.offset();                   
 		$(window).scroll(function() {
 			var windowpos = $(window).scrollTop();
-			console.log("Scroll position: " + windowpos);
-			// console.log("Distance to bottom " + $(window).scrollBottom());
+			// console.log("Scroll position: " + windowpos);
+			console.log("Distance to bottom " + $(window).scrollBottom());
 			if (windowpos > workpos.top - nav ) {
 				works.addClass("stick");
 				works.removeClass("sticky-fix");
@@ -103,10 +103,12 @@ $(document).ready(function() {
 				abouts.removeClass("stick");
 			}
 
-			if ($(window).scrollBottom() <= $('#work').height() + $('#contact').height()) {
+			if ($(window).scrollBottom() <= $('#work').height()) {
 				abouts.removeClass("stick");
 				abouts.addClass("sticky-fix");
 			}
 		});
 	}
+
+	console.log($('#about .rightcont').height())
 });
