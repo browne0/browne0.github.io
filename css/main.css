@@ -373,7 +373,7 @@ a, a:focus, a:hover {
 		position: absolute;
 	}
 
-	@media only screen and (min-width: 1366px) {
+	@media only screen and (max-width: 1400px) {
 		.name {
 			font-size: 40px;
 		}
