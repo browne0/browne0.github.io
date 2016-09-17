@@ -375,7 +375,7 @@ a, a:focus, a:hover {
 
 	@media only screen and (max-width: 1366px) {
 		.name {
-			font-size: 80px;
+			font-size: 40px;
 		}
 
 		.infoWrapper {
@@ -383,7 +383,7 @@ a, a:focus, a:hover {
 		}
 
 		.typerInfo {
-			/*font-size: 18px;*/
+			font-size: 22px;
 		}
 
 		#home .social a {
