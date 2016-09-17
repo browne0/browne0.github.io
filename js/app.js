@@ -85,7 +85,7 @@ $(document).ready(function() {
 			var windowpos = $(window).scrollTop();
 			// console.log("Scroll position: " + windowpos);
 			console.log("Distance to bottom " + $(window).scrollBottom());
-			if (windowpos > workpos.top - nav ) {
+			if (windowpos > workpos.top) {
 				works.addClass("stick");
 				works.removeClass("sticky-fix");
 			} else {
@@ -96,7 +96,7 @@ $(document).ready(function() {
 				works.removeClass("stick");
 				works.addClass("sticky-fix");
 			}
-			if (windowpos >= aboutpos.top - nav ) {
+			if (windowpos >= aboutpos.top) {
 				abouts.addClass("stick");
 				abouts.removeClass("sticky-fix");
 			} else {
