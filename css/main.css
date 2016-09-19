@@ -168,10 +168,6 @@ a, a:focus, a:hover {
 	}
 	/* ABOUT CSS */
 
-	#about {
-		padding-bottom: 20px;
-	}
-
 	#about .leftcont {
 		height: 100vh;
 		background-color: rgba(255, 132, 13, .6);
@@ -220,24 +216,63 @@ a, a:focus, a:hover {
 		max-height: 193px;
 	}
 
-	.aboutMe {
-		padding: 85px 45px 0px 120px;
+	.aboutMe p {
+		font-size: 24px;
+		margin-bottom: 30px;
 	}
 
-	.aboutMe p {
-		font-size: 22px;
+	.aboutMe h2 {
+		display: inline-block;
+		margin: 0px 8px 0px 15px;
+	}
+
+	.aboutMe h2.keyboardLooksOdd {
+		display: inline-block;
+		margin: 0px 0px 0px 15px;
+	}
+
+	.aboutMe .frame {
+		height: 48px;
+		width: 100%;
+		white-space: nowrap;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.aboutMe .img {
+		margin-top: -15px;
+	}
+
+	#about .col-lg-6 {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+
+	.aboutMeSectionFirst {
+		padding: 85px 45px 85px 100px;
+	}
+
+	.aboutMeSection {
+		padding: 85px 45px 85px 100px;
+		background-color: rgba(9, 112, 84, .35);
+	}
+
+	.aboutMeSectionAlt {
+		padding: 85px 45px 85px 100px;
 	}
 
 	/* WORK CSS */
 
+
+
 	#work .leftcont {
-		min-height: 92vh;
+		min-height: 100vh;
 		background-color: rgb(255, 255, 255);
 	}
 
 	#work .rightcont {
 		background-color: rgba(255, 132, 13, .6);
-		min-height: 92vh;
+		min-height: 100vh;
 	}
 
 	#work h1 {
@@ -345,10 +380,9 @@ a, a:focus, a:hover {
 	}
 
 	#work {
-		min-height: 92vh;
+		min-height: 100vh;
 		z-index: 2;
 		background: transparent;
-		height: auto;
 		overflow: hidden;
 	}
 
@@ -358,6 +392,16 @@ a, a:focus, a:hover {
 		font-size: 70px;
 		padding-top: 18px;
 		padding-left: 23px;
+	}
+
+	/* CONTACT PAGE */
+	.contact {
+		background-color: rgba(9, 112, 84, .35);
+		overflow: hidden;
+	}
+	.contact p {
+		margin: 40px 0px;
+		font-size: 22px;
 	}
 
 	/* Sticky shit */
@@ -521,7 +565,7 @@ a, a:focus, a:hover {
 		}
 
 		.aboutMe {
-			padding: 50px 30px 0px 80px;
+			
 		}
 
 		.aboutMe p {
@@ -681,7 +725,7 @@ a, a:focus, a:hover {
 		}
 
 		.aboutMe {
-			padding: 20px 20px 0px 20px;
+			
 		}
 
 		.aboutMe p {
@@ -775,6 +819,31 @@ a, a:focus, a:hover {
 			-moz-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
 			box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
 		}
+
+		.aboutMeSectionFirst {
+			padding: 25px 25px 0px 25px;
+		}
+
+		.aboutMeSection {
+			padding: 25px 25px 0px 25px;
+		}
+
+		.aboutMeSectionAlt {
+			padding: 25px 25px 0px 25px;
+		}
+
+		.aboutMe h2{
+			margin: 0px 2px 0px 2px;
+		}
+
+		.aboutMe p{
+			margin-bottom: 0px;
+			padding-bottom: 25px;
+		}
+
+		.aboutMe .frame {
+			text-align: center;
+		}
 	}
 
 	@media only screen and (max-width: 424px) {
@@ -819,7 +888,7 @@ a, a:focus, a:hover {
 
 		.aboutMe {
 
-			padding: 20px 20px 0px 20px;
+			
 		}
 
 		.aboutMe p {
@@ -927,6 +996,31 @@ a, a:focus, a:hover {
 			-moz-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
 			box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
 		}
+
+		.aboutMeSectionFirst {
+			padding: 25px 25px 0px 25px;
+		}
+
+		.aboutMeSection {
+			padding: 25px 25px 0px 25px;
+		}
+
+		.aboutMeSectionAlt {
+			padding: 25px 25px 0px 25px;
+		}
+
+		.aboutMe h2{
+			margin: 0px 2px 0px 2px;
+		}
+
+		.aboutMe p{
+			margin-bottom: 0px;
+			padding-bottom: 25px;
+		}
+
+		.aboutMe .frame {
+			text-align: center;
+		}
 	}
 
 	@media only screen and (max-width: 375px) {
@@ -972,7 +1066,7 @@ a, a:focus, a:hover {
 
 		.aboutMe {
 
-			padding: 20px 20px 0px 20px;
+			
 		}
 
 		.aboutMe p {
@@ -1077,6 +1171,31 @@ a, a:focus, a:hover {
 			-webkit-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
 			-moz-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
 			box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+		}
+
+		.aboutMeSectionFirst {
+			padding: 25px 25px 0px 25px;
+		}
+
+		.aboutMeSection {
+			padding: 25px 25px 0px 25px;
+		}
+
+		.aboutMeSectionAlt {
+			padding: 25px 25px 0px 25px;
+		}
+
+		.aboutMe h2{
+			margin: 0px 2px 0px 2px;
+		}
+
+		.aboutMe p{
+			margin-bottom: 0px;
+			padding-bottom: 25px;
+		}
+
+		.aboutMe .frame {
+			text-align: center;
 		}
 	}
 
@@ -1122,7 +1241,6 @@ a, a:focus, a:hover {
 
 		.aboutMe {
 
-			padding: 20px 20px 0px 20px;
 		}
 
 		.aboutMe p {
@@ -1227,6 +1345,31 @@ a, a:focus, a:hover {
 			-webkit-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
 			-moz-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
 			box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+		}
+
+		.aboutMeSectionFirst {
+			padding: 25px 25px 0px 25px;
+		}
+
+		.aboutMeSection {
+			padding: 25px 25px 0px 25px;
+		}
+
+		.aboutMeSectionAlt {
+			padding: 25px 25px 0px 25px;
+		}
+
+		.aboutMe h2{
+			margin: 0px 2px 0px 2px;
+		}
+
+		.aboutMe p{
+			margin-bottom: 0px;
+			padding-bottom: 25px;
+		}
+
+		.aboutMe .frame {
+			text-align: center;
 		}
 
 	}
@@ -1274,7 +1417,7 @@ a, a:focus, a:hover {
 
 		.aboutMe {
 
-			padding: 20px 20px 0px 20px;
+			
 		}
 
 		.aboutMe p {
@@ -1379,5 +1522,30 @@ a, a:focus, a:hover {
 			-webkit-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
 			-moz-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
 			box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+		}
+
+		.aboutMeSectionFirst {
+			padding: 25px 15px 0px 15px;
+		}
+
+		.aboutMeSection {
+			padding: 25px 15px 0px 15px;
+		}
+
+		.aboutMeSectionAlt {
+			padding: 25px 15px 0px 15px;
+		}
+
+		.aboutMe h2{
+			margin: 0px 2px 0px 2px;
+		}
+
+		.aboutMe p{
+			margin-bottom: 0px;
+			padding-bottom: 25px;
+		}
+
+		.aboutMe .frame {
+			text-align: center;
 		}
 	}

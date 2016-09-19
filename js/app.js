@@ -25,9 +25,6 @@ typer('.typertext', 45)
 .back(13)
 .continue("Designer.")
 .pause(2000)
-.back(9)
-.continue("Ukulele player.")
-.pause(2000)
 .back('all')
 .continue("I can do whatever you need, really. I'm an overachiever.")
 .pause(4000)
@@ -85,17 +82,17 @@ $(document).ready(function() {
 			var windowpos = $(window).scrollTop();
 			// console.log("Scroll position: " + windowpos);
 			console.log("Distance to bottom " + $(window).scrollBottom());
-			if (windowpos > workpos.top) {
-				works.addClass("stick");
-				works.removeClass("sticky-fix");
-			} else {
-				works.removeClass("stick");
-			}
+			// if (windowpos > workpos.top - nav) {
+			// 	works.addClass("stick");
+			// 	works.removeClass("sticky-fix");
+			// } else {
+			// 	works.removeClass("stick");
+			// }
 
-			if ($(window).scrollBottom() <= $('#contact').height()) {
-				works.removeClass("stick");
-				works.addClass("sticky-fix");
-			}
+			// if ($(window).scrollBottom() <= $('.contact').height()) {
+			// 	works.removeClass("stick");
+			// 	works.addClass("sticky-fix");
+			// }
 			if (windowpos >= aboutpos.top) {
 				abouts.addClass("stick");
 				abouts.removeClass("sticky-fix");
@@ -112,28 +109,3 @@ $(document).ready(function() {
 
 	console.log($('#about .rightcont').height())
 });
-
-var timelineBlocks = $('.cd-timeline-block'),
-		offset = 0.8;
-
-	//hide timeline blocks which are outside the viewport
-	hideBlocks(timelineBlocks, offset);
-
-	//on scolling, show/animate timeline blocks when enter the viewport
-	$(window).on('scroll', function(){
-		(!window.requestAnimationFrame) 
-			? setTimeout(function(){ showBlocks(timelineBlocks, offset); }, 100)
-			: window.requestAnimationFrame(function(){ showBlocks(timelineBlocks, offset); });
-	});
-
-	function hideBlocks(blocks, offset) {
-		blocks.each(function(){
-			( $(this).offset().top > $(window).scrollTop()+$(window).height()*offset ) && $(this).find('.cd-timeline-img, .cd-timeline-content').addClass('is-hidden');
-		});
-	}
-
-	function showBlocks(blocks, offset) {
-		blocks.each(function(){
-			( $(this).offset().top <= $(window).scrollTop()+$(window).height()*offset && $(this).find('.cd-timeline-img').hasClass('is-hidden') ) && $(this).find('.cd-timeline-img, .cd-timeline-content').removeClass('is-hidden').addClass('bounce-in');
-		});
-	}
