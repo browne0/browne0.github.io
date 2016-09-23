@@ -94,7 +94,7 @@ a, a:focus, a:hover {
 	/* HOME CSS */
 
 	#home {
-		background-color: #FF7518;
+		background: url(../img/pattern-3.png) rgba(255, 132, 13, 1);
 		height: 100vh;
 		position: relative;
 		z-index: 2;
@@ -124,7 +124,7 @@ a, a:focus, a:hover {
 		border-right: 2px solid rgb(245, 245, 245);
 		padding: 10px 25px 10px 25px;
 		margin-bottom: 15px;
-		text-shadow: 4px 4px 2px rgba(184, 95, 9, 0.59);
+		text-shadow: 4px 4px 2px rgba(56, 56, 56, .4);
 		-webkit-box-shadow: 2px 2px 5px -1px rgba(56,56,56,.5);
 		-moz-box-shadow: 2px 2px 5px -1px rgba(56,56,56,.5);
 		box-shadow: 2px 2px 5px -1px rgba(56,56,56,.5);
@@ -190,7 +190,7 @@ a, a:focus, a:hover {
 
 	#about .social {
 		bottom: 150px;
-		width: 355.28px;
+		width: 281px;
 		margin: 250px auto 0px auto;
 	}
 
@@ -298,7 +298,7 @@ a, a:focus, a:hover {
 
 	#work .social {
 		bottom: 150px;
-		width: 355.28px;
+		width: 281px;
 		margin: 250px auto 0px auto;
 	}
 
@@ -387,11 +387,11 @@ a, a:focus, a:hover {
 	}
 
 	#about .social a, #work .social a {
-		width: 110px;
-		height: 110px;
-		font-size: 70px;
+		width: 85px;
+		height: 85px;
+		font-size: 45px;
 		padding-top: 18px;
-		padding-left: 23px;
+		padding-left: 20px;
 	}
 
 	/* CONTACT PAGE */
