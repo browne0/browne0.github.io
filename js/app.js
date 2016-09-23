@@ -1,3 +1,58 @@
+var app = angular.module('myApp', ['ngRoute']);
+
+app.config(function($routeProvider) {
+	$routeProvider
+
+	.when('/', {
+		templateUrl: '../pages/workMain.html',
+		controller: 'WorkMainController'
+	})
+
+	.when('/spotter', {
+		templateUrl: '../pages/spotter.html',
+		controller: 'SpotterController'
+	})
+
+	.when('/factsoftoday', {
+		templateUrl: '../pages/factsoftoday.html',
+		controller: 'FactsOfTodayController'
+	})
+
+	.when('/medxport', {
+		templateUrl: '../pages/medxport.html',
+		controller: 'MedxportController'
+	})
+
+	.when('/mychef', {
+		templateUrl: '../pages/mychef.html',
+		controller: 'MyChefController'
+	})
+
+	.otherwise({redirectTo: '/'});
+});
+
+app.controller('WorkMainController', function($scope) {
+
+})
+
+app.controller('SpotterController', function($scope) {
+	
+})
+
+app.controller('FactsOfTodayController', function($scope) {
+	
+})
+
+app.controller('MedxportController', function($scope) {
+	
+})
+
+app.controller('MyChefController', function($scope) {
+	
+})
+
+
+
 $.fn.scrollBottom = function() { 
 	return $(document).height() - this.scrollTop() - this.height(); 
 };

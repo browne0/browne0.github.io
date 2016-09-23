@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 <head>
 	<meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
 	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
@@ -147,52 +147,12 @@
 		</div>
 	</section>
 	<section id="work" class="page">
-		<div class="col-lg-6 col-xs-12 leftcont" id="sticker2">
-			<div class="workwrap">
-				<h1>Work</h1>
-				<div class="social">
-					<a href="https://linkedin.com/in/malikbrowne"><i class="fa fa-linkedin"></i></a>
-					<a href="MalikBrowneResume.pdf"><i class="fa fa-file-text"></i></a>
-					<a href="mailto:malik@beesdesign.net"><i class="fa fa-envelope-o"></i></a>
-				</div>
-			</div>
-			
-		</div>
-		<div class="col-lg-6 col-xs-12 rightcont pull-right">
-			<div class="logorow">
-				<div class="logo pull-left pic">
-					<div class="mask-overlay"></div>
-				<div class="social-icons">
-					<a href="http://dev.beesdesign.net/spotter"><i class="fa fa-share-square-o" aria-hidden="true"></i></a>
-				</div>
-			</div>
-			
-				<div class="logo2 pull-right pic">
-					<div class="mask-overlay"></div>
-					<div class="social-icons">
-					<a href="https://itunes.apple.com/cv/app/facts-of-today/id1118574083"><i class="fa fa-share-square-o" aria-hidden="true"></i></a>
-					</div>
-				</div>
-			</div>
-			<div class="logorow">
-				<div class="logo3 pull-left pic">
-					<div class="mask-overlay"></div>
-					<div class="social-icons">
-					<a href="#"><i class="fa fa-share-square-o" aria-hidden="true"></i></a>
-					</div>
-				</div>
-			
-				<div class="logo4 pull-right pic">
-					<div class="mask-overlay"></div>
-					<div class="social-icons">
-					<a href="http://dev.beesdesign.net/mychef"><i class="fa fa-share-square-o" aria-hidden="true"></i></a>
-					</div>
-				</div>
-			</div>
-		</div>
+		<div ng-view></div>
 	</section>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js"></script>
 <script src="js/skrollr.min.js"></script>
 <script src='js/typer.js'></script>
 <script src='js/app.js'></script>
