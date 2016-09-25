@@ -557,28 +557,10 @@ a, a:focus, a:hover {
 	opacity: 0.5;
 	display: inline-block;
 	padding: 0px 10px;
-	-webkit-transform: scale(0);
-	   -moz-transform: scale(0);
-		-ms-transform: scale(0);
-		 -o-transform: scale(0);
-			transform: scale(0);
-}
-
-.mask-overlay:hover + .social-icons a {
-	-webkit-transform: scale(1);
-	   -moz-transform: scale(1);
-		-ms-transform: scale(1);
-		 -o-transform: scale(1);
-			transform: scale(1);
 }
 
 .social-icons a:hover {
 	opacity: 1;
-	-webkit-transform: scale(1);
-	   -moz-transform: scale(1);
-		-ms-transform: scale(1);
-		 -o-transform: scale(1);
-			transform: scale(1);
 }
 
 /* SLIDER */
