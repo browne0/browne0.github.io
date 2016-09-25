@@ -1234,7 +1234,7 @@ a, a:focus, a:hover {
 		}
 
 		.social-icons a {
-	
+	opacity: 1 !important;
 	-webkit-transform: scale(1) !important;
 	   -moz-transform: scale(1) !important;
 		-ms-transform: scale(1) !important;
