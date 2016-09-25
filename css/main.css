@@ -538,7 +538,7 @@ a, a:focus, a:hover {
    			transition: all 0.35s ease-in-out;
 }
 
-.pic:hover .social-icons a {
+.pic:hover .social-icons a i {
 	opacity: 0.5;
 }
 
@@ -558,7 +558,6 @@ a, a:focus, a:hover {
 .social-icons a {
 	font-size: 35px;
 	color: #fff;
-	opacity: 0;
 	width: 100%;
 	height: 100%;
 	display: inline-block;
@@ -570,9 +569,10 @@ a, a:focus, a:hover {
     top: 50%;
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
+    opacity: 0;
 }
 
-.social-icons a:hover {
+.social-icons a i:hover {
 	opacity: 1;
 }
 
