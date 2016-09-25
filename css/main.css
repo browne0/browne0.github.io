@@ -6,6 +6,8 @@
 	font-weight: bold;
 }
 
+/* GLOBAL STYLES */
+
 *{
 	margin: 0;
 	padding: 0;
@@ -23,6 +25,13 @@ a, a:focus, a:hover {
 
 #skrollr-body {
 	min-height: 1px;
+}
+
+::selection {
+  background-color: rgba(255, 132, 13, .6); /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background-color: rgba(255, 132, 13, .6); /* Gecko Browsers */
 }
 
 /* NAVBAR CSS */
@@ -188,6 +197,10 @@ a, a:focus, a:hover {
 
 	}
 
+	#about .funfact1 {
+		position: relative;
+	}
+
 	#about .social {
 		bottom: 150px;
 		width: 281px;
@@ -263,7 +276,81 @@ a, a:focus, a:hover {
 
 	/* WORK CSS */
 
+	#work .cancel {
+		position: absolute;
+		display: inline-block;
+		top: 25px;
+		right: 25px;
+	}
 
+	#work h1.projecttitle {
+		font-size: 60px;
+		margin-top:30px;
+	}
+
+	#work .screenshot {
+		width: 100%;
+		height: 100%;
+		margin-top: 25px;
+		display: block;
+		margin: 25px auto 0px auto;
+	}
+
+	#work .gifscreenshot {
+		width: 366px;
+		height: 612px;
+		display: block;
+		margin: 25px auto 0px auto;
+	}
+
+	#work .gifscreenshot2 {
+		width: 316px;
+		height: 564px;
+		display: block;
+		margin: 25px auto 0px auto;
+	}
+
+	#work .pill {
+		margin: 15px 5px 0px 5px;
+		border-radius: 500px;
+		border: 1px solid black;
+		overflow: hidden;
+	}
+
+	#work .pill a {
+		display: inline-block;
+		height: 37.5px;
+		line-height: 37.5px;
+		text-align: center;
+		vertical-align: middle;
+		color: black;
+		padding: 0px 15px;
+	}
+
+	#work h3 {
+		font-size: 22px;
+		display: inline-block;
+		line-height: 37.5px;
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+
+	#work .description {
+		padding-bottom: 25px;
+	}
+
+	#work .description ul {
+		font-size: 18px;
+		margin-left: 20px;
+	}
+
+	#work .description p {
+		font-size: 18px;
+	}
+
+	#work .pill a:hover {
+		background-color: rgba(255, 132, 13, .6);
+	}
 
 	#work .leftcont {
 		min-height: 100vh;
@@ -285,7 +372,7 @@ a, a:focus, a:hover {
 
 	#work .fa-envelope-o {
 		margin-top: -3px;
-		margin-left: -5px;
+		margin-left: -2px;
 	}
 
 	.workwrap {
@@ -494,6 +581,234 @@ a, a:focus, a:hover {
 			transform: scale(1);
 }
 
+/* SLIDER */
+
+#work .slider {
+	margin-top: 15px;
+}
+
+
+/* ANIMATIONS */
+
+.work-spotter {
+	background-color: rgb(250, 250, 250);
+}
+
+.work-factsoftoday {
+	background-color: rgb(56, 56, 56);
+	color: rgb(245, 245, 245) !important;
+}
+
+.work-factsoftoday .pill a {
+	color: rgb(250, 250, 250) !important;
+}
+
+.work-factsoftoday li a {
+	color: rgba(255, 132, 13, 1);;
+}
+
+.work-factsoftoday .pill {
+	border-color: rgb(250, 250, 250) !important;
+}
+
+.work-medxport {
+	background-color: rgb(250, 250, 250);
+}
+
+.work-mychef {
+	background-color: rgb(56, 56, 56);
+	color: rgb(245, 245, 245) !important;
+}
+
+.work-mychef .pill a {
+	color: rgb(250, 250, 250) !important;
+}
+
+.work-mychef .pill {
+	border-color: rgb(250, 250, 250) !important;
+}
+
+/* rotate and fall */
+@-webkit-keyframes rotateFall {
+	0% { -webkit-transform: rotateZ(0deg); }
+	20% { -webkit-transform: rotateZ(10deg); -webkit-animation-timing-function: ease-out; }
+	40% { -webkit-transform: rotateZ(17deg); }
+	60% { -webkit-transform: rotateZ(24deg); }
+	100% { -webkit-transform: translateY(100%) rotateZ(17deg); }
+}
+@-moz-keyframes rotateFall {
+	0% { -moz-transform: rotateZ(0deg); }
+	20% { -moz-transform: rotateZ(10deg); -moz-animation-timing-function: ease-out; }
+	40% { -moz-transform: rotateZ(17deg); }
+	60% { -moz-transform: rotateZ(16deg); }
+	100% { -moz-transform: translateY(100%) rotateZ(17deg); }
+}
+@keyframes rotateFall {
+	0% { transform: rotateZ(0deg); }
+	20% { transform: rotateZ(10deg); animation-timing-function: ease-out; }
+	40% { transform: rotateZ(17deg); }
+	60% { transform: rotateZ(16deg); }
+	100% { transform: translateY(100%) rotateZ(17deg); }
+}
+
+/* scale up */
+@keyframes scaleUp {
+	from 		{ opacity: 0.3; transform: scale(0.8); }
+}
+@-moz-keyframes scaleUp {
+	from 		{ opacity: 0.3; -moz-transform: scale(0.8); }
+}
+@-webkit-keyframes scaleUp {
+	from 		{ opacity: 0.3; -webkit-transform: scale(0.8); }
+}
+
+/* slide in from the right */
+@keyframes slideInRight {
+	from 	{ transform:translateX(100%); }
+	to 		{ transform: translateX(0); }
+}
+@-moz-keyframes slideInRight {
+	from 	{ -moz-transform:translateX(100%); }
+	to 		{ -moz-transform: translateX(0); }
+}
+@-webkit-keyframes slideInRight {
+	from 	{ -webkit-transform:translateX(100%); }
+	to 		{ -webkit-transform: translateX(0); }
+}
+
+/* slide in from the bottom */
+@keyframes slideInUp {
+	from 	{ transform:translateY(100%); }
+	to 		{ transform: translateY(0); }
+}
+@-moz-keyframes slideInUp {
+	from 	{ -moz-transform:translateY(100%); }
+	to 		{ -moz-transform: translateY(0); }
+}
+@-webkit-keyframes slideInUp {
+	from 	{ -webkit-transform:translateY(100%); }
+	to 		{ -webkit-transform: translateY(0); }
+}
+
+/* slide out from the left */
+@keyframes slideOutLeft {
+	to 		{ transform: translateX(-100%); }
+}
+@-moz-keyframes slideOutLeft {	
+	to 		{ -moz-transform: translateX(-100%); }
+}
+@-webkit-keyframes slideOutLeft {
+	to 		{ -webkit-transform: translateX(-100%); }
+}
+
+/* rotate out newspaper */
+@-webkit-keyframes rotateOutNewspaper {
+	to { -webkit-transform: translateZ(-3000px) rotateZ(360deg); opacity: 0; }
+}
+@-moz-keyframes rotateOutNewspaper {
+	to { -moz-transform: translateZ(-3000px) rotateZ(360deg); opacity: 0; }
+}
+@keyframes rotateOutNewspaper {
+	to { transform: translateZ(-3000px) rotateZ(360deg); opacity: 0; }
+}
+
+/* fade out */
+
+@keyframes fadeOut {
+	from 	{ opacity: 1; }
+	to 		{ opacity: 0; }
+}
+@-moz-keyframes fadeOut {
+	from 	{ opacity: 1; }
+	to 		{ opacity: 0; }
+}
+@-webkit-keyframes Out {
+	from 	{ opacity: 1; }
+	to 		{ opacity: 0; }
+}
+
+/* fade in */
+
+@keyframes fadeIn {
+	from 	{ opacity: 0; }
+	to 		{ opacity: 1; }
+}
+@-moz-keyframes fadeIn {
+	from 	{ opacity: 0; }
+	to 		{ opacity: 1; }
+}
+@-webkit-keyframes fadeIn {
+	from 	{ opacity: 0; }
+	to 		{ opacity: 1; }
+}
+
+/* this is enough im tired of making animations */
+
+/* Main -------------------------- */
+.work-home.ng-leave {
+	-webkit-animation:fadeOut 0.5s both ease-in;
+	-moz-animation:fadeOut 0.5s both ease-in;
+	animation:fadeOut 0.5s both ease-in;   
+}
+
+.work-home.ng-enter {
+	-webkit-animation:slideInUp 0.5s both ease-in;
+	-moz-animation:slideInUp 0.5s both ease-in;
+	animation:slideInUp 0.5s both ease-in;  
+}
+
+/* FactsOfToday -------------------------- */
+.work-factsoftoday.ng-leave {
+    -webkit-transform-origin: 0% 0%;
+	-webkit-animation: rotateFall 1s both ease-in;
+	-moz-transform-origin: 0% 0%;
+	-moz-animation: rotateFall 1s both ease-in;
+	transform-origin: 0% 0%;
+	animation: rotateFall 1s both ease-in;
+}
+.work-factsoftoday.ng-enter {  
+    -webkit-animation:scaleUp 0.5s both ease-in;
+	-moz-animation:scaleUp 0.5s both ease-in;
+	animation:scaleUp 0.5s both ease-in;    
+}
+
+/* myChef ------------------------ */
+.work-mychef.ng-leave {
+    -webkit-animation:slideOutLeft 0.5s both ease-in;
+	-moz-animation:slideOutLeft 0.5s both ease-in;
+	animation:slideOutLeft 0.5s both ease-in;   
+}
+.work-mychef.ng-enter {  
+    -webkit-animation:slideInRight 0.5s both ease-in;
+	-moz-animation:slideInRight 0.5s both ease-in;
+	animation:slideInRight 0.5s both ease-in;    
+}
+
+/* Spotter ---------------------- */
+.work-spotter.ng-leave {
+    -webkit-animation:fadeOut 0.5s both ease-in;
+	-moz-animation:fadeOut 0.5s both ease-in;
+	animation:fadeOut 0.5s both ease-in; 
+}
+.work-spotter.ng-enter { 
+    -webkit-animation:slideInUp 0.75s both ease-in;
+	-moz-animation:slideInUp 0.75s both ease-in;
+	animation:slideInUp 0.75s both ease-in;  
+}
+
+/* myChef ------------------------ */
+.work-medxport.ng-leave {
+    -webkit-animation:slideOutLeft 0.5s both ease-in;
+	-moz-animation:slideOutLeft 0.5s both ease-in;
+	animation:slideOutLeft 0.5s both ease-in;   
+}
+.work-medxport.ng-enter {  
+    -webkit-animation:slideInRight 0.5s both ease-in;
+	-moz-animation:slideInRight 0.5s both ease-in;
+	animation:slideInRight 0.5s both ease-in;    
+}
+
+
 	@media only screen and (max-width: 1500px) {
 		.name {
 			font-size: 40px;
@@ -569,7 +884,7 @@ a, a:focus, a:hover {
 		}
 
 		.aboutMe p {
-			font-size: 18px;
+			font-size: 20px;
 		}
 
 		#about .fa-facebook {
@@ -659,6 +974,71 @@ a, a:focus, a:hover {
 			-moz-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
 			box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
 		}
+
+		#work .cancel {
+		position: absolute;
+		display: inline-block;
+		margin-top: 15px;
+		margin-left:5px;
+	}
+
+	#work .cancel img{
+		width: 16px;
+		height: 16px;
+	}
+
+	#work h1.projecttitle {
+		font-size: 50px;
+		margin-top:30px;
+	}
+
+	#work .screenshot {
+		width: 100%;
+		height: 100%;
+		margin-top: 25px;
+		display: block;
+		margin: 25px auto 0px auto;
+	}
+
+	#work .screenshot {
+		width: 100%;
+		height: 100%;
+		margin-top: 25px;
+		display: block;
+		margin: 25px auto 0px auto;
+	}
+
+	#work .pill {
+		margin-top: 10px;
+		/*padding: 15px 40px;*/
+		border-radius: 500px;
+		border: 1px solid black;
+		overflow: hidden;
+		margin-left: 50px;
+		margin-bottom: 15px;
+	}
+
+	#work .pill a {
+		display: block;
+		width: 250px;
+		height: 55px;
+		line-height: 50px;
+		font-size: 24px;
+		text-align: center;
+		color: black;
+	}
+
+	#work h3 {
+		font-size: 24px;
+		display: inline-block;
+		line-height: 50px;
+		margin-top: 15px;
+		margin-bottom: 0px;
+	}
+
+	#work .description p, #work .description ul {
+		font-size: 18px;
+	}
 	}
 
 	@media only screen and (max-width: 768px) {
@@ -844,6 +1224,14 @@ a, a:focus, a:hover {
 		.aboutMe .frame {
 			text-align: center;
 		}
+
+		#work .description p {
+			font-size: 20px;
+		}
+
+		#work .description ul {
+			font-size: 20px;
+		}
 	}
 
 	@media only screen and (max-width: 424px) {
@@ -1021,6 +1409,62 @@ a, a:focus, a:hover {
 		.aboutMe .frame {
 			text-align: center;
 		}
+
+		#work .cancel {
+		position: absolute;
+		display: inline-block;
+		margin-top: 15px;
+		margin-left:5px;
+	}
+
+	#work .cancel img{
+		width: 16px;
+		height: 16px;
+	}
+
+	#work h1.projecttitle {
+		font-size: 50px;
+		margin-top:30px;
+	}
+
+	#work .screenshot {
+		width: 100%;
+		height: 100%;
+		margin-top: 25px;
+		display: block;
+		margin: 25px auto 0px auto;
+	}
+
+	#work .pill {
+		margin-top: 10px;
+		/*padding: 15px 40px;*/
+		border-radius: 500px;
+		border: 1px solid black;
+		overflow: hidden;
+		margin-left: 98px;
+		margin-bottom: 15px;
+	}
+
+	#work .pill a {
+		display: block;
+		width: 150px;
+		height: 37.5px;
+		line-height: 37.5px;
+		text-align: center;
+		color: black;
+	}
+
+	#work h3 {
+		font-size: 16px;
+		display: inline-block;
+		line-height: 25px;
+		margin-top: 15px;
+		margin-bottom: 0px;
+	}
+
+	#work .container-fluid .pull-right {
+		float: left !important;
+	}
 	}
 
 	@media only screen and (max-width: 375px) {
@@ -1548,4 +1992,8 @@ a, a:focus, a:hover {
 		.aboutMe .frame {
 			text-align: center;
 		}
+
+	#work .pill {
+		margin-left: 50px;
+	}
 	}

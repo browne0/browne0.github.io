@@ -1,55 +1,75 @@
-var app = angular.module('myApp', ['ngRoute']);
+var app = angular.module('myApp', ['ngRoute', 'ngAnimate']);
 
-app.config(function($routeProvider) {
+app.config(['$routeProvider', '$locationProvider',
+	function($routeProvider, $locationProvider) {
 	$routeProvider
 
 	.when('/', {
-		templateUrl: '../pages/workMain.html',
+		templateUrl: '/browne0.github.io/pages/workMain.html',
 		controller: 'WorkMainController'
 	})
 
-	.when('/spotter', {
-		templateUrl: '../pages/spotter.html',
+	.when('/projects/spotter', {
+		templateUrl: '/browne0.github.io/pages/spotter.html',
 		controller: 'SpotterController'
 	})
 
-	.when('/factsoftoday', {
-		templateUrl: '../pages/factsoftoday.html',
+	.when('/projects/factsoftoday', {
+		templateUrl: '/browne0.github.io/pages/factsoftoday.html',
 		controller: 'FactsOfTodayController'
 	})
 
-	.when('/medxport', {
-		templateUrl: '../pages/medxport.html',
+	.when('/projects/medxport', {
+		templateUrl: '/browne0.github.io/pages/medxport.html',
 		controller: 'MedxportController'
 	})
 
-	.when('/mychef', {
-		templateUrl: '../pages/mychef.html',
+	.when('/projects/mychef', {
+		templateUrl: '/browne0.github.io/pages/mychef.html',
 		controller: 'MyChefController'
 	})
 
 	.otherwise({redirectTo: '/'});
-});
+
+	$locationProvider.html5Mode({
+        enabled: true
+    });
+}]);
 
 app.controller('WorkMainController', function($scope) {
-
+	$scope.pageClass = 'work-home';
 })
 
 app.controller('SpotterController', function($scope) {
-	
-})
+	$scope.pageClass = 'work-spotter';
+});
 
 app.controller('FactsOfTodayController', function($scope) {
-	
-})
+	$scope.pageClass = 'work-factsoftoday';
+});
 
 app.controller('MedxportController', function($scope) {
-	
-})
+	$scope.pageClass = 'work-medxport';
+});
 
 app.controller('MyChefController', function($scope) {
-	
-})
+	$scope.pageClass = 'work-mychef';
+});
+
+app.directive('flexslider', function () {
+  
+  return {
+    link: function (scope, element, attrs) {
+      
+      element.flexslider({
+        animation: "slide",
+        startAt: 0,
+        controlNav: false,
+        slideshow: false
+      });
+    }
+  }
+});
 
 
 
@@ -131,7 +151,7 @@ $(document).ready(function() {
 		$(window).scroll(function() {
 			var windowpos = $(window).scrollTop();
 			// console.log("Scroll position: " + windowpos);
-			console.log("Distance to bottom " + $(window).scrollBottom());
+			// console.log("Distance to bottom " + $(window).scrollBottom());
 			// if (windowpos > workpos.top - nav) {
 			// 	works.addClass("stick");
 			// 	works.removeClass("sticky-fix");
@@ -157,5 +177,13 @@ $(document).ready(function() {
 		});
 	}
 
-	console.log($('#about .rightcont').height())
+	// console.log($('#about .rightcont').height())
+ 
+  // hide our element on page load
+  $('.funfact').css('opacity', 0)
+ $('.animated').waypoint(function() {
+	$(this).toggleClass($(this).data('animated'));
+	$(this).css('opacity', 1)
+},{ offset: 'bottom-in-view', triggerOnce: true });
+
 });
