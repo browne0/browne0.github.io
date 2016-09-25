@@ -4,7 +4,7 @@ app.config(['$routeProvider', '$locationProvider',
 	function($routeProvider, $locationProvider) {
 	$routeProvider
 
-	.when('/', {
+	.when('#/', {
 		templateUrl: '/browne0.github.io/pages/workMain.html',
 		controller: 'WorkMainController'
 	})
