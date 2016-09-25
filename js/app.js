@@ -81,26 +81,7 @@ typer('.typertext', 30)
 .cursor({blink: 'soft'})
 .line(' ')
 .pause(500)
-.continue('^')
-.pause(1000)
-.continue(" That's me. ")
-.pause(1500)
-.continue('I create beautiful & functional websites & applications for all devices.')
-.pause(5000)
-.empty()
-.pause(500)
-.continue("Over the years, I've developed strong skills as a Web Developer.")
-.pause(2000)
-.back(15)
-.continue("n iOS Developer.")
-.pause(2000)
-.back(16)
-.continue(" Photographer.")
-.pause(2000)
-.back('all')
-.empty()
-.pause(300)
-.continue("Web Developer, iOS Developer, Designer, Photographer. The story continues!");
+.continue("Web Developer, iOS Developer, Web Designer, Photographer. The story continues!");
 
 ( function( $ ) {
     // Init Skrollr
