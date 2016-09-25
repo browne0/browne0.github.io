@@ -5,27 +5,27 @@ app.config(['$routeProvider', '$locationProvider',
 	$routeProvider
 
 	.when('/', {
-		templateUrl: '/browne0.github.io/pages/workMain.html',
+		templateUrl: '/pages/workMain.html',
 		controller: 'WorkMainController'
 	})
 
 	.when('/projects/spotter', {
-		templateUrl: '/browne0.github.io/pages/spotter.html',
+		templateUrl: '/pages/spotter.html',
 		controller: 'SpotterController'
 	})
 
 	.when('/projects/factsoftoday', {
-		templateUrl: '/browne0.github.io/pages/factsoftoday.html',
+		templateUrl: '/pages/factsoftoday.html',
 		controller: 'FactsOfTodayController'
 	})
 
 	.when('/projects/medxport', {
-		templateUrl: '/browne0.github.io/pages/medxport.html',
+		templateUrl: '/pages/medxport.html',
 		controller: 'MedxportController'
 	})
 
 	.when('/projects/mychef', {
-		templateUrl: '/browne0.github.io/pages/mychef.html',
+		templateUrl: '/pages/mychef.html',
 		controller: 'MyChefController'
 	})
 
