@@ -539,7 +539,7 @@ a, a:focus, a:hover {
 }
 
 .pic:hover .social-icons a i {
-	opacity: 0.5;
+	opacity: 0.7;
 }
 
 .social-icons {
@@ -570,10 +570,6 @@ a, a:focus, a:hover {
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     opacity: 0;
-}
-
-.social-icons a i:hover {
-	opacity: 1;
 }
 
 /* SLIDER */
