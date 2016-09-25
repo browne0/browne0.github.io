@@ -32,7 +32,8 @@ app.config(['$routeProvider', '$locationProvider',
 	.otherwise({redirectTo: '/'});
 
 	$locationProvider.html5Mode({
-        enabled: true
+        enabled: true,
+        requireBase: false
     });
 }]);
 
