@@ -540,6 +540,11 @@ a, a:focus, a:hover {
 
 .pic:hover .social-icons a i {
 	opacity: 0.7;
+	-webkit-transition: all 0.35s ease-in-out;
+   	   -moz-transition: all 0.35s ease-in-out;
+   		 -o-transition: all 0.35s ease-in-out;
+   		-ms-transition: all 0.35s ease-in-out;
+   			transition: all 0.35s ease-in-out;
 }
 
 .social-icons {
@@ -743,24 +748,21 @@ a, a:focus, a:hover {
 }
 
 .work-home.ng-enter {
-	-webkit-animation:slideInUp 0.5s both ease-in;
-	-moz-animation:slideInUp 0.5s both ease-in;
-	animation:slideInUp 0.5s both ease-in;  
+	-webkit-animation:fadeIn 0.5s both ease-in;
+	-moz-animation:fadeIn 0.5s both ease-in;
+	animation:fadeIn 0.5s both ease-in;  
 }
 
 /* FactsOfToday -------------------------- */
 .work-factsoftoday.ng-leave {
-    -webkit-transform-origin: 0% 0%;
-	-webkit-animation: rotateFall 1s both ease-in;
-	-moz-transform-origin: 0% 0%;
-	-moz-animation: rotateFall 1s both ease-in;
-	transform-origin: 0% 0%;
-	animation: rotateFall 1s both ease-in;
+    -webkit-animation:slideOutLeft 0.5s both ease-in;
+	-moz-animation:slideOutLeft 0.5s both ease-in;
+	animation:slideOutLeft 0.5s both ease-in;   
 }
 .work-factsoftoday.ng-enter {  
-    -webkit-animation:scaleUp 0.5s both ease-in;
-	-moz-animation:scaleUp 0.5s both ease-in;
-	animation:scaleUp 0.5s both ease-in;    
+    -webkit-animation:slideInRight 0.5s both ease-in;
+	-moz-animation:slideInRight 0.5s both ease-in;
+	animation:slideInRight 0.5s both ease-in;    
 }
 
 /* myChef ------------------------ */
@@ -777,17 +779,17 @@ a, a:focus, a:hover {
 
 /* Spotter ---------------------- */
 .work-spotter.ng-leave {
-    -webkit-animation:fadeOut 0.5s both ease-in;
-	-moz-animation:fadeOut 0.5s both ease-in;
-	animation:fadeOut 0.5s both ease-in; 
+    -webkit-animation:slideOutLeft 0.5s both ease-in;
+	-moz-animation:slideOutLeft 0.5s both ease-in;
+	animation:slideOutLeft 0.5s both ease-in;   
 }
-.work-spotter.ng-enter { 
-    -webkit-animation:slideInUp 0.75s both ease-in;
-	-moz-animation:slideInUp 0.75s both ease-in;
-	animation:slideInUp 0.75s both ease-in;  
+.work-spotter.ng-enter {  
+    -webkit-animation:slideInRight 0.5s both ease-in;
+	-moz-animation:slideInRight 0.5s both ease-in;
+	animation:slideInRight 0.5s both ease-in;    
 }
 
-/* myChef ------------------------ */
+/* MedxPort ------------------------ */
 .work-medxport.ng-leave {
     -webkit-animation:slideOutLeft 0.5s both ease-in;
 	-moz-animation:slideOutLeft 0.5s both ease-in;
