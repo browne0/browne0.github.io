@@ -538,7 +538,7 @@ a, a:focus, a:hover {
    			transition: all 0.35s ease-in-out;
 }
 
-.mask-overlay:hover + .social-icons a {
+.pic:hover .social-icons a {
 	opacity: 0.5;
 }
 
