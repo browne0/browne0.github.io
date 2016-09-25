@@ -1240,6 +1240,7 @@ a, a:focus, a:hover {
 		-ms-transform: scale(1) !important;
 		 -o-transform: scale(1) !important;
 			transform: scale(1) !important;
+			color: rgba(9, 112, 84, 1);
 }
 	}
 
