@@ -538,6 +538,10 @@ a, a:focus, a:hover {
    			transition: all 0.35s ease-in-out;
 }
 
+.mask-overlay:hover + .social-icons a {
+	opacity: 0.5;
+}
+
 .social-icons {
 	position: absolute;
 	z-index: 60;
@@ -547,17 +551,25 @@ a, a:focus, a:hover {
 	left: 50%;
 	display:inline-block;
     transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
 	text-align: center;
 }
 
 .social-icons a {
 	font-size: 35px;
 	color: #fff;
-	opacity: 0.5;
+	opacity: 0;
+	width: 100%;
+	height: 100%;
 	display: inline-block;
 	padding: 0px 10px;
+	position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
 }
+
+.social-icons .fa-share-square-o
 
 .social-icons a:hover {
 	opacity: 1;
