@@ -4,7 +4,7 @@ app.config(['$routeProvider', '$locationProvider',
 	function($routeProvider, $locationProvider) {
 	$routeProvider
 
-	.when('#/', {
+	.when('/', {
 		templateUrl: '/browne0.github.io/pages/workMain.html',
 		controller: 'WorkMainController'
 	})
@@ -33,7 +33,6 @@ app.config(['$routeProvider', '$locationProvider',
 
 	$locationProvider.html5Mode({
         enabled: true,
-        requireBase: false
     });
 }]);
 
