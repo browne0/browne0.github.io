@@ -563,13 +563,14 @@ a, a:focus, a:hover {
 	height: 100%;
 	display: inline-block;
 	padding: 0px 10px;
+}
+
+.social-icons .fa-share-square-o {
 	position: relative;
     top: 50%;
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
 }
-
-.social-icons .fa-share-square-o
 
 .social-icons a:hover {
 	opacity: 1;
