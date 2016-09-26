@@ -141,7 +141,7 @@ a, a:focus, a:hover {
 
 	.typerInfo {
 		padding: 10px 0px;
-		font-size: 25px;
+		font-size: 22px;
 		color: #333;
 		text-align: left;
 	}
@@ -812,7 +812,7 @@ a, a:focus, a:hover {
 		}
 
 		.typerInfo {
-			font-size: 22px;
+			font-size: 19px;
 		}
 
 		#home .social a {
