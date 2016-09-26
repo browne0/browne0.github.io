@@ -83,16 +83,6 @@ typer('.typertext', 30)
 .pause(500)
 .continue("Web Developer, iOS Developer, Web Designer, Photographer. The story continues!");
 
-( function( $ ) {
-    // Init Skrollr
-    var s = skrollr.init({
-    	forceHeight: false,
-    	mobileCheck: function() {
-    		return false;
-    	}
-    });
-} )( jQuery );
-
 // Hotfix: Realign navbar logo when button is pressed
 $(".navbar-toggle").on("click", function(){
 	if ($('.navbar-toggle').attr('aria-expanded') === "false") {
@@ -124,6 +114,16 @@ $(function() {
 $(document).ready(function() {
 
 	if ($(window).width() > 800) {
+		( function( $ ) {
+    // Init Skrollr
+    var s = skrollr.init({
+    	forceHeight: false,
+    	mobileCheck: function() {
+    		return false;
+    	}
+    });
+} )( jQuery );
+
 		var abouts = $("#about #sticker");
 		var works = $('#work #sticker2');
 		var nav = $(".navbar").height();
