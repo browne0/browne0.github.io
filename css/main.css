@@ -42,6 +42,11 @@ a, a:focus, a:hover {
 	-webkit-box-shadow: 2px 2px 5px -1px rgba(56,56,56,1);
 	-moz-box-shadow: 2px 2px 5px -1px rgba(56,56,56,1);
 	box-shadow: 2px 2px 5px -1px rgba(56,56,56,1);
+	-o-transition: all .4s;
+	-moz-transition: all .4s;
+	-webkit-transition: all .4s;
+	-ms-transition: all .4s;
+	transition: all .4s;
 }
 
 .navbar li:hover {
