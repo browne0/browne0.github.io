@@ -155,6 +155,16 @@ $(document).ready(function() {
 				abouts.removeClass("stick");
 				abouts.addClass("sticky-fix");
 			}
+
+			if ($(document).scrollTop() > 50) {
+				$('nav').addClass('shrink');
+				$('.navbar li a').addClass('shrink');
+				$('.navbar-brand').addClass('shrink');
+				} else {
+				$('nav').removeClass('shrink');
+				$('.navbar li a').removeClass('shrink');
+				$('.navbar-brand').removeClass('shrink');
+			}
 		});
 	}
 

@@ -68,6 +68,18 @@ a, a:focus, a:hover {
 	color: rgba(9, 112, 84, .7);
 }
 
+nav.navbar.shrink {
+  height: 60px;
+}
+
+nav.navbar li a.shrink {
+	padding: 19.5px 60px;
+}
+
+nav.navbar .navbar-brand.shrink {
+	padding: 19px 0px;
+}
+
 /* PANEL CSS */
 
 .page {
