@@ -194,6 +194,15 @@ nav.navbar .navbar-brand.shrink {
 	}
 	/* ABOUT CSS */
 
+	#about .container-fluid {
+		padding-left: 100px;
+		padding-right: 100px;
+	}
+
+	#about .heading {
+		height: 175px;
+	}
+
 	#about .leftcont {
 		height: 100vh;
 		background-color: rgba(255, 132, 13, .6);
@@ -208,7 +217,7 @@ nav.navbar .navbar-brand.shrink {
 
 	#about h1 {
 		text-align: center;
-		font-size: 90px;
+		font-size: 80px;
 		font-family: Open Sans;
 		margin: 0px;
 
@@ -246,8 +255,19 @@ nav.navbar .navbar-brand.shrink {
 		max-height: 193px;
 	}
 
+	.funfact {
+		border: 2px solid rgba(56,56,56,.6);
+		padding: 20px 20px 0px 20px;
+		border-radius: 10px;
+		-webkit-box-shadow: 5px 5px 7px 2px rgba(207,207,207,1);
+		-moz-box-shadow: 5px 5px 7px 2px rgba(207,207,207,1);
+		box-shadow: 5px 5px 7px 2px rgba(6,69,52,.4);
+		min-height: 580px;
+		background-color: rgb(250, 250, 250);
+	}
+
 	.aboutMe p {
-		font-size: 24px;
+		font-size: 20px;
 		margin-bottom: 30px;
 	}
 
@@ -267,6 +287,7 @@ nav.navbar .navbar-brand.shrink {
 		white-space: nowrap;
 		display: inline-block;
 		vertical-align: middle;
+		text-align: center;
 	}
 
 	.aboutMe .img {
@@ -478,7 +499,7 @@ nav.navbar .navbar-brand.shrink {
 	#about {
 		min-height: 100vh;
 		z-index: 2;
-		background: transparent;
+		background-color: rgba(9, 112, 84, .35);
 		height: auto;
 		overflow: hidden;
 	}
