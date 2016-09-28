@@ -1,107 +1,95 @@
 /* FONT FACES */
 
 @font-face {
-  font-family: Hallo Sans;
-  src: url(../fonts/HalloSans.otf);
-  font-weight: bold;
+	font-family: Hallo Sans;
+	src: url(../fonts/HalloSans.otf);
+	font-weight: bold;
 }
-
 
 /* GLOBAL STYLES */
 
-* {
-  margin: 0;
-  padding: 0;
-  font-family: 'Open Sans', sans-serif;
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans', sans-serif;
 }
 
-a {
-  text-decoration: none;
-  -o-transition: all .4s;
-  -moz-transition: all .4s;
-  -webkit-transition: all .4s;
-  -ms-transition: all .4s;
-  transition: all .4s;
-  &:focus, &:hover {
-    text-decoration: none;
-    -o-transition: all .4s;
-    -moz-transition: all .4s;
-    -webkit-transition: all .4s;
-    -ms-transition: all .4s;
-    transition: all .4s;
-  }
+a, a:focus, a:hover {
+	text-decoration: none;
+	-o-transition: all .4s;
+	-moz-transition: all .4s;
+	-webkit-transition: all .4s;
+	-ms-transition: all .4s;
+	transition: all .4s;
 }
 
 #skrollr-body {
-  min-height: 1px;
+	min-height: 1px;
 }
 
 ::selection {
-  background-color: rgba(255, 132, 13, 0.6);
-  /* WebKit/Blink Browsers */
+  background-color: rgba(255, 132, 13, .6); /* WebKit/Blink Browsers */
 }
-
 ::-moz-selection {
-  background-color: rgba(255, 132, 13, 0.6);
-  /* Gecko Browsers */
+  background-color: rgba(255, 132, 13, .6); /* Gecko Browsers */
 }
 
 /* NAVBAR CSS */
 
 .navbar {
-  height: 85px;
-  background-color: rgb(255, 255, 255);
-  -webkit-box-shadow: 2px 2px 5px -1px rgba(56, 56, 56, 1);
-  -moz-box-shadow: 2px 2px 5px -1px rgba(56, 56, 56, 1);
-  box-shadow: 2px 2px 5px -1px rgba(56, 56, 56, 1);
-  -o-transition: all .4s;
-  -moz-transition: all .4s;
-  -webkit-transition: all .4s;
-  -ms-transition: all .4s;
-  transition: all .4s;
-  li {
-    &:hover {
-      -o-transition: all .4s;
-      -moz-transition: all .4s;
-      -webkit-transition: all .4s;
-      -ms-transition: all .4s;
-      transition: all .4s;
-      background-color: rgb(225, 225, 225);
-    }
-    a {
-      color: black;
-      font-size: 25px;
-      padding: 32px 60px;
-      /* Will need to change for responsive to 32px 15px */
-      font-weight: 300;
-      text-decoration: none;
-      background-color: rgb(255, 255, 255);
-    }
-  }
-  .navbar-brand {
-    font-size: 35px;
-    padding: 30px 0px;
-    color: rgba(9, 112, 84, 0.7);
-  }
+	height: 85px;
+	background-color: rgb(255, 255, 255);
+	-webkit-box-shadow: 2px 2px 5px -1px rgba(56,56,56,1);
+	-moz-box-shadow: 2px 2px 5px -1px rgba(56,56,56,1);
+	box-shadow: 2px 2px 5px -1px rgba(56,56,56,1);
+	-o-transition: all .4s;
+	-moz-transition: all .4s;
+	-webkit-transition: all .4s;
+	-ms-transition: all .4s;
+	transition: all .4s;
 }
 
-nav.navbar {
-  &.shrink {
-    height: 60px;
-  }
-  li a.shrink {
-    padding: 19.5px 60px;
-  }
-  .navbar-brand.shrink {
-    padding: 19px 0px;
-  }
+.navbar li:hover {
+	-o-transition: all .4s;
+	-moz-transition: all .4s;
+	-webkit-transition: all .4s;
+	-ms-transition: all .4s;
+	transition: all .4s;
+	background-color: rgb(225, 225, 225);
+}
+
+.navbar li a {
+	color: black;
+	font-size: 25px;
+	padding: 32px 60px; /* Will need to change for responsive to 32px 15px */ 
+	font-weight: 300;
+	text-decoration: none;
+	background-color: rgb(255, 255, 255);
+}
+
+.navbar .navbar-brand {
+	font-size: 35px;
+	padding: 30px 0px;
+	color: rgba(9, 112, 84, .7);
+}
+
+nav.navbar.shrink {
+  height: 60px;
+}
+
+nav.navbar li a.shrink {
+	padding: 19.5px 60px;
+}
+
+nav.navbar .navbar-brand.shrink {
+	padding: 19px 0px;
 }
 
 /* PANEL CSS */
 
 .page {
-  width: 100%;
-  position: relative;
+	width: 100%;
+	position: relative;
 }
 
 /* ARROW CSS */
@@ -129,1831 +117,1926 @@ nav.navbar {
 	filter: drop-shadow(0px 3px 1px rgba(45,45,45,.75));
 	}*/
 
-/* HOME CSS */
+	/* HOME CSS */
 
-#home {
-  background: url(../img/pattern-3.png) rgba(255, 132, 13, 1);
-  height: 100vh;
-  position: relative;
-  z-index: 2;
-  -webkit-box-shadow: 2px 3px 5px -1px rgba(45, 45, 45, 0.5);
-  -moz-box-shadow: 2px 3px 5px -1px rgba(45, 45, 45, 0.5);
-  box-shadow: 2px 3px 5px 0px rgba(45, 45, 45, 0.5);
-  z-index: 3;
-  .infoWrapper {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  .fa-facebook {
-    padding-top: 2px;
-    margin-left: -4px;
-  }
+	#home {
+		background: url(../img/pattern-3.png) rgba(255, 132, 13, 1);
+		height: 100vh;
+		position: relative;
+		z-index: 2;
+		-webkit-box-shadow: 2px 3px 5px -1px rgba(45,45,45,.5);
+		-moz-box-shadow: 2px 3px 5px -1px rgba(45,45,45,.5);
+		box-shadow: 2px 3px 5px 0px rgba(45,45,45,.5);
+		z-index: 3;
+	}
+
+	#home .infoWrapper {
+		position: absolute;
+		top: 50%;
+		left:50%;
+		transform: translate(-50%, -50%);
+	}
+
+	#home .fa-facebook {
+		padding-top: 2px;
+		margin-left: -4px;
+	}
+
+	.name {
+		font-size: 60px;
+		text-align: center;
+		color: rgb(245, 245, 245);
+		border-bottom: 2px solid rgb(245, 245, 245);
+		border-right: 2px solid rgb(245, 245, 245);
+		padding: 10px 25px 10px 25px;
+		margin-bottom: 15px;
+		text-shadow: 4px 4px 2px rgba(56, 56, 56, .4);
+		-webkit-box-shadow: 2px 2px 5px -1px rgba(56,56,56,.5);
+		-moz-box-shadow: 2px 2px 5px -1px rgba(56,56,56,.5);
+		box-shadow: 2px 2px 5px -1px rgba(56,56,56,.5);
+	}
+
+	.typerInfo {
+		padding: 10px 0px;
+		font-size: 22px;
+		color: #333;
+		text-align: left;
+	}
+
+	#home .social {
+		text-align: center;
+		margin-top: 15px;
+	}
+
+	.social a {
+
+		display: inline-block;
+		width: 64px;
+		height: 64px;
+		margin: 3px;
+		padding-top: 9px;
+		border: 2px solid rgb(56, 56, 56);
+		-moz-border-radius: 50%;
+		-webkit-border-radius: 50%;
+		border-radius: 50%;
+		font-size: 40px;
+		color: rgb(56, 56, 56);
+		line-height: 28px;
+	}
+	.social a:hover {
+		outline: 0;
+		background-color: rgb(245, 245, 245);
+	}
+
+	#work .social a:hover {
+		outline: 0;
+		background-color: rgba(255, 132, 13, .6);
+	}
+	/* ABOUT CSS */
+
+	#about .container-fluid {
+		padding-left: 100px;
+		padding-right: 100px;
+	}
+
+	#about .heading {
+		height: 175px;
+	}
+
+	#about .leftcont {
+		height: 100vh;
+		background-color: rgba(255, 132, 13, .6);
+		z-index: 3;
+	}
+
+	#about .rightcont {
+		background-color: rgb(255, 255, 255);
+		height: auto;
+		z-index: 2;
+	}
+
+	#about h1 {
+		text-align: center;
+		font-size: 80px;
+		font-family: Open Sans;
+		margin: 0px;
+
+	}
+
+	#about .funfact1 {
+		position: relative;
+	}
+
+	#about .social {
+		bottom: 150px;
+		width: 281px;
+		margin: 250px auto 0px auto;
+	}
+
+	#about .fa-facebook {
+		padding-top: 2px;
+		margin-left: 7px;
+	}
+
+	.aboutwrap {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+	}
+
+	.selfie {
+		display: inline-block;
+		position: absolute;
+		top: 175px;
+		right: -75px;
+		max-width: 150px;
+		max-height: 193px;
+	}
+
+	/*.funfact {
+		border: 2px solid rgba(56,56,56,.6);
+		padding: 20px 20px 0px 20px;
+		border-radius: 10px;
+		-webkit-box-shadow: 5px 5px 7px 2px rgba(207,207,207,1);
+		-moz-box-shadow: 5px 5px 7px 2px rgba(207,207,207,1);
+		box-shadow: 5px 5px 7px 2px rgba(6,69,52,.4);
+		min-height: 580px;
+		background-color: rgb(250, 250, 250);
+	}*/
+
+	.aboutMe p {
+		font-size: 20px;
+		margin-bottom: 30px;
+	}
+
+	.aboutMe h2 {
+		display: inline-block;
+		margin: 0px 8px 0px 15px;
+	}
+
+	.aboutMe h2.keyboardLooksOdd {
+		display: inline-block;
+		margin: 0px 0px 0px 15px;
+	}
+
+	.aboutMe .frame {
+		height: 48px;
+		width: 100%;
+		white-space: nowrap;
+		display: inline-block;
+		vertical-align: middle;
+		text-align: center;
+	}
+
+	.aboutMe .img {
+		margin-top: -15px;
+	}
+
+	#about .col-lg-6 {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+
+	.aboutMeSectionFirst {
+		padding: 85px 45px 85px 100px;
+	}
+
+	.aboutMeSection {
+		padding: 85px 45px 85px 100px;
+		background-color: rgba(9, 112, 84, .35);
+	}
+
+	.aboutMeSectionAlt {
+		padding: 85px 45px 85px 100px;
+	}
+
+	/* WORK CSS */
+
+	#work .cancel {
+		position: absolute;
+		display: inline-block;
+		top: 25px;
+		right: 25px;
+	}
+
+	#work h1.projecttitle {
+		font-size: 60px;
+		margin-top:30px;
+	}
+
+	#work .screenshot {
+		width: 100%;
+		height: 100%;
+		margin-top: 25px;
+		display: block;
+		margin: 25px auto 0px auto;
+	}
+
+	#work .gifscreenshot {
+		width: 366px;
+		height: 612px;
+		display: block;
+		margin: 25px auto 0px auto;
+	}
+
+	#work .gifscreenshot2 {
+		width: 316px;
+		height: 564px;
+		display: block;
+		margin: 25px auto 0px auto;
+	}
+
+	#work .pill {
+		margin: 15px 5px 0px 5px;
+		border-radius: 500px;
+		border: 1px solid black;
+		overflow: hidden;
+	}
+
+	#work .pill a {
+		display: inline-block;
+		height: 37.5px;
+		line-height: 37.5px;
+		text-align: center;
+		vertical-align: middle;
+		color: black;
+		padding: 0px 15px;
+	}
+
+	#work h3 {
+		font-size: 22px;
+		display: inline-block;
+		line-height: 37.5px;
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+
+	#work .description {
+		padding-bottom: 25px;
+	}
+
+	#work .description ul {
+		font-size: 18px;
+		margin-left: 20px;
+	}
+
+	#work .description p {
+		font-size: 18px;
+	}
+
+	#work .pill a:hover {
+		background-color: rgba(255, 132, 13, .6);
+	}
+
+	#work .leftcont {
+		min-height: 100vh;
+		background-color: rgb(255, 255, 255);
+	}
+
+	#work .rightcont {
+		background-color: rgba(255, 132, 13, .6);
+		min-height: 100vh;
+	}
+
+	#work h1 {
+		text-align: center;
+		font-size: 90px;
+		font-family: Open Sans;
+		margin: 0px;
+
+	}
+
+	#work .fa-envelope-o {
+		margin-top: -3px;
+		margin-left: -2px;
+	}
+
+	.workwrap {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+	}
+
+	#work .social {
+		bottom: 150px;
+		width: 281px;
+		margin: 250px auto 0px auto;
+	}
+
+	.logorow {
+		height: 300px;
+		margin-top:10%;
+		position: relative;
+	}
+
+	.logorow .logo {
+		background-image: url(../img/spotter.png);
+		width: 300px;
+		height: 300px;
+		border-radius: 40px;
+		display: inline-block;
+		margin-left: 10%;
+		overflow: hidden;
+		position: relative;
+		-webkit-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+		-moz-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+		box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+	}
+
+	.logorow .logo2 {
+		background: url(../img/factsoftoday.svg) white;
+		background-repeat: no-repeat;
+		background-size: 250px 250px;
+		background-position: center;
+		width: 300px;
+		height: 300px;
+		border-radius: 40px;
+		display: inline-block;
+		margin-right: 10%;
+		/*overflow: hidden;*/
+		position: relative;
+		-webkit-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+		-moz-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+		box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+	}
+
+	.logorow .logo3 {
+		background: url(../img/medxport.jpg) white;
+		background-repeat: no-repeat;
+		background-size: 300px 88px;
+		background-position: center;
+		width: 300px;
+		height: 300px;
+		border-radius: 40px;
+		display: inline-block;
+		margin-left: 10%;
+		overflow: hidden;
+		position: relative;
+		-webkit-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+		-moz-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+		box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+	}
+
+	.logorow .logo4 {
+		background-image: url(../img/mychef.png);
+		background-size: cover;
+		width: 300px;
+		height: 300px;
+		border-radius: 40px;
+		display: inline-block;
+		margin-right: 10%;
+		overflow: hidden;
+		position: relative;
+		-webkit-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+		-moz-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+		box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+	}
+
+	#about {
+		min-height: 100vh;
+		z-index: 2;
+		background-color: rgba(9, 112, 84, .35);
+		height: auto;
+		overflow: hidden;
+	}
+
+	#work {
+		min-height: 100vh;
+		z-index: 2;
+		background: transparent;
+		overflow: hidden;
+	}
+
+	#about .social a, #work .social a {
+		width: 85px;
+		height: 85px;
+		font-size: 45px;
+		padding-top: 18px;
+		padding-left: 20px;
+	}
+
+	/* CONTACT PAGE */
+	.contact {
+		background-color: rgba(9, 112, 84, .35);
+		overflow: hidden;
+	}
+	.contact p {
+		margin: 40px 0px;
+		font-size: 22px;
+	}
+
+	/* Sticky shit */
+
+	.stick {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index:10000;
+		-webkit-transition: all 0.35s ease-in-out;
+   	   -moz-transition: all 0.35s ease-in-out;
+   		 -o-transition: all 0.35s ease-in-out;
+   		-ms-transition: all 0.35s ease-in-out;
+   			transition: all 0.35s ease-in-out;
+	}
+
+	.sticky-fix {
+		bottom: 0;
+		position: absolute;
+	}
+
+	.mask-overlay{
+	position: absolute;
+	z-index: 50;
+	height: 100%;
+	width:100%;
+	top: 0;
+	left: 50%;
+    transform: translate(-50%, 0);
+    -webkit-transform: translateX(-50%);
+    background-color: rgba(9, 112, 84, 1);
+	opacity: 0;
+	border-radius: 40px;
+	-webkit-transition: all 0.35s ease-in-out;
+   	   -moz-transition: all 0.35s ease-in-out;
+   		 -o-transition: all 0.35s ease-in-out;
+   		-ms-transition: all 0.35s ease-in-out;
+   			transition: all 0.35s ease-in-out;
 }
 
-.name {
-  font-size: 60px;
-  text-align: center;
-  color: rgb(245, 245, 245);
-  border-bottom: 2px solid rgb(245, 245, 245);
-  border-right: 2px solid rgb(245, 245, 245);
-  padding: 10px 25px 10px 25px;
-  margin-bottom: 15px;
-  text-shadow: 4px 4px 2px rgba(56, 56, 56, 0.4);
-  -webkit-box-shadow: 2px 2px 5px -1px rgba(56, 56, 56, 0.5);
-  -moz-box-shadow: 2px 2px 5px -1px rgba(56, 56, 56, 0.5);
-  box-shadow: 2px 2px 5px -1px rgba(56, 56, 56, 0.5);
+ .pic:hover .mask-overlay {
+	opacity: .7;
+	-webkit-transition: all 0.35s ease-in-out;
+   	   -moz-transition: all 0.35s ease-in-out;
+   		 -o-transition: all 0.35s ease-in-out;
+   		-ms-transition: all 0.35s ease-in-out;
+   			transition: all 0.35s ease-in-out;
 }
 
-.typerInfo {
-  padding: 10px 0px;
-  font-size: 22px;
-  color: #333;
-  text-align: left;
-}
-
-#home .social {
-  text-align: center;
-  margin-top: 15px;
-}
-
-.social a {
-  display: inline-block;
-  width: 64px;
-  height: 64px;
-  margin: 3px;
-  padding-top: 9px;
-  border: 2px solid rgb(56, 56, 56);
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  font-size: 40px;
-  color: rgb(56, 56, 56);
-  line-height: 28px;
-  &:hover {
-    outline: 0;
-    background-color: rgb(245, 245, 245);
-  }
-}
-
-#work .social a:hover {
-  outline: 0;
-  background-color: rgba(255, 132, 13, 0.6);
-}
-
-/* ABOUT CSS */
-
-#about {
-  .container-fluid {
-    padding-left: 100px;
-    padding-right: 100px;
-  }
-  .heading {
-    height: 175px;
-  }
-  .leftcont {
-    height: 100vh;
-    background-color: rgba(255, 132, 13, 0.6);
-    z-index: 3;
-  }
-  .rightcont {
-    background-color: rgb(255, 255, 255);
-    height: auto;
-    z-index: 2;
-  }
-  h1 {
-    text-align: center;
-    font-size: 80px;
-    font-family: Open Sans;
-    margin: 0px;
-  }
-  .funfact1 {
-    position: relative;
-  }
-  .social {
-    bottom: 150px;
-    width: 281px;
-    margin: 250px auto 0px auto;
-  }
-  .fa-facebook {
-    padding-top: 2px;
-    margin-left: 7px;
-  }
-}
-
-.aboutwrap {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-.selfie {
-  display: inline-block;
-  position: absolute;
-  top: 175px;
-  right: -75px;
-  max-width: 150px;
-  max-height: 193px;
-}
-
-/*.funfact {
-	border: 2px solid rgba(56,56,56,.6);
-	padding: 20px 20px 0px 20px;
-	border-radius: 10px;
-	-webkit-box-shadow: 5px 5px 7px 2px rgba(207,207,207,1);
-	-moz-box-shadow: 5px 5px 7px 2px rgba(207,207,207,1);
-	box-shadow: 5px 5px 7px 2px rgba(6,69,52,.4);
-	min-height: 580px;
-	background-color: rgb(250, 250, 250);
-}*/
-
-.aboutMe {
-  p {
-    font-size: 20px;
-    margin-bottom: 30px;
-  }
-  h2 {
-    display: inline-block;
-    margin: 0px 8px 0px 15px;
-    &.keyboardLooksOdd {
-      display: inline-block;
-      margin: 0px 0px 0px 15px;
-    }
-  }
-  .frame {
-    height: 48px;
-    width: 100%;
-    white-space: nowrap;
-    display: inline-block;
-    vertical-align: middle;
-    text-align: center;
-  }
-  .img {
-    margin-top: -15px;
-  }
-}
-
-#about .col-lg-6 {
-  padding-left: 0px;
-  padding-right: 0px;
-}
-
-.aboutMeSectionFirst {
-  padding: 85px 45px 85px 100px;
-}
-
-.aboutMeSection {
-  padding: 85px 45px 85px 100px;
-  background-color: rgba(9, 112, 84, 0.35);
-}
-
-.aboutMeSectionAlt {
-  padding: 85px 45px 85px 100px;
-}
-
-/* WORK CSS */
-
-#work {
-  .cancel {
-    position: absolute;
-    display: inline-block;
-    top: 25px;
-    right: 25px;
-  }
-  h1.projecttitle {
-    font-size: 60px;
-    margin-top: 30px;
-  }
-  .screenshot {
-    width: 100%;
-    height: 100%;
-    margin-top: 25px;
-    display: block;
-    margin: 25px auto 0px auto;
-  }
-  .gifscreenshot {
-    width: 366px;
-    height: 612px;
-    display: block;
-    margin: 25px auto 0px auto;
-  }
-  .gifscreenshot2 {
-    width: 316px;
-    height: 564px;
-    display: block;
-    margin: 25px auto 0px auto;
-  }
-  .pill {
-    margin: 15px 5px 0px 5px;
-    border-radius: 500px;
-    border: 1px solid black;
-    overflow: hidden;
-    a {
-      display: inline-block;
-      height: 37.5px;
-      line-height: 37.5px;
-      text-align: center;
-      vertical-align: middle;
-      color: black;
-      padding: 0px 15px;
-    }
-  }
-  h3 {
-    font-size: 22px;
-    display: inline-block;
-    line-height: 37.5px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-  }
-  .description {
-    padding-bottom: 25px;
-    ul {
-      font-size: 18px;
-      margin-left: 20px;
-    }
-    p {
-      font-size: 18px;
-    }
-  }
-  .pill a:hover {
-    background-color: rgba(255, 132, 13, 0.6);
-  }
-  .leftcont {
-    min-height: 100vh;
-    background-color: rgb(255, 255, 255);
-  }
-  .rightcont {
-    background-color: rgba(255, 132, 13, 0.6);
-    min-height: 100vh;
-  }
-  h1 {
-    text-align: center;
-    font-size: 90px;
-    font-family: Open Sans;
-    margin: 0px;
-  }
-  .fa-envelope-o {
-    margin-top: -3px;
-    margin-left: -2px;
-  }
-}
-
-.workwrap {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-#work .social {
-  bottom: 150px;
-  width: 281px;
-  margin: 250px auto 0px auto;
-}
-
-.logorow {
-  height: 300px;
-  margin-top: 10%;
-  position: relative;
-  .logo {
-    background-image: url(../img/spotter.png);
-    width: 300px;
-    height: 300px;
-    border-radius: 40px;
-    display: inline-block;
-    margin-left: 10%;
-    overflow: hidden;
-    position: relative;
-    -webkit-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-    -moz-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-    box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-  }
-  .logo2 {
-    background: url(../img/factsoftoday.svg) white;
-    background-repeat: no-repeat;
-    background-size: 250px 250px;
-    background-position: center;
-    width: 300px;
-    height: 300px;
-    border-radius: 40px;
-    display: inline-block;
-    margin-right: 10%;
-    /*overflow: hidden;*/
-    position: relative;
-    -webkit-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-    -moz-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-    box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-  }
-  .logo3 {
-    background: url(../img/medxport.jpg) white;
-    background-repeat: no-repeat;
-    background-size: 300px 88px;
-    background-position: center;
-    width: 300px;
-    height: 300px;
-    border-radius: 40px;
-    display: inline-block;
-    margin-left: 10%;
-    overflow: hidden;
-    position: relative;
-    -webkit-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-    -moz-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-    box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-  }
-  .logo4 {
-    background-image: url(../img/mychef.png);
-    background-size: cover;
-    width: 300px;
-    height: 300px;
-    border-radius: 40px;
-    display: inline-block;
-    margin-right: 10%;
-    overflow: hidden;
-    position: relative;
-    -webkit-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-    -moz-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-    box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-  }
-}
-
-#about {
-  min-height: 100vh;
-  z-index: 2;
-  background-color: rgba(9, 112, 84, 0.35);
-  height: auto;
-  overflow: hidden;
-}
-
-#work {
-  min-height: 100vh;
-  z-index: 2;
-  background: transparent;
-  overflow: hidden;
-}
-
-#about .social a, #work .social a {
-  width: 85px;
-  height: 85px;
-  font-size: 45px;
-  padding-top: 18px;
-  padding-left: 20px;
-}
-
-/* CONTACT PAGE */
-
-.contact {
-  background-color: rgba(9, 112, 84, 0.35);
-  overflow: hidden;
-  p {
-    margin: 40px 0px;
-    font-size: 22px;
-  }
-}
-
-/* Sticky shit */
-
-.stick {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10000;
-  -webkit-transition: all 0.35s ease-in-out;
-  -moz-transition: all 0.35s ease-in-out;
-  -o-transition: all 0.35s ease-in-out;
-  -ms-transition: all 0.35s ease-in-out;
-  transition: all 0.35s ease-in-out;
-}
-
-.sticky-fix {
-  bottom: 0;
-  position: absolute;
-}
-
-.mask-overlay {
-  position: absolute;
-  z-index: 50;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, 0);
-  -webkit-transform: translateX(-50%);
-  background-color: rgba(9, 112, 84, 1);
-  opacity: 0;
-  border-radius: 40px;
-  -webkit-transition: all 0.35s ease-in-out;
-  -moz-transition: all 0.35s ease-in-out;
-  -o-transition: all 0.35s ease-in-out;
-  -ms-transition: all 0.35s ease-in-out;
-  transition: all 0.35s ease-in-out;
-}
-
-.pic:hover {
-  .mask-overlay {
-    opacity: .7;
-    -webkit-transition: all 0.35s ease-in-out;
-    -moz-transition: all 0.35s ease-in-out;
-    -o-transition: all 0.35s ease-in-out;
-    -ms-transition: all 0.35s ease-in-out;
-    transition: all 0.35s ease-in-out;
-  }
-  .social-icons a i {
-    opacity: 0.7;
-    -webkit-transition: all 0.35s ease-in-out;
-    -moz-transition: all 0.35s ease-in-out;
-    -o-transition: all 0.35s ease-in-out;
-    -ms-transition: all 0.35s ease-in-out;
-    transition: all 0.35s ease-in-out;
-  }
+.pic:hover .social-icons a i {
+	opacity: 0.7;
+	-webkit-transition: all 0.35s ease-in-out;
+   	   -moz-transition: all 0.35s ease-in-out;
+   		 -o-transition: all 0.35s ease-in-out;
+   		-ms-transition: all 0.35s ease-in-out;
+   			transition: all 0.35s ease-in-out;
 }
 
 .social-icons {
-  position: absolute;
-  z-index: 60;
-  top: 50%;
-  width: 100%;
-  height: 100%;
-  left: 50%;
-  display: inline-block;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  text-align: center;
-  a {
-    font-size: 35px;
-    color: #fff;
-    width: 100%;
-    height: 100%;
-    display: inline-block;
-    padding: 0px 10px;
-  }
-  .fa-share-square-o {
-    position: relative;
+	position: absolute;
+	z-index: 60;
+	top: 50%;
+	width: 100%;
+	height: 100%;
+	left: 50%;
+	display:inline-block;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.social-icons a {
+	font-size: 35px;
+	color: #fff;
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+	padding: 0px 10px;
+}
+
+.social-icons .fa-share-square-o {
+	position: relative;
     top: 50%;
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     opacity: 0;
-  }
 }
 
 /* SLIDER */
 
 #work .slider {
-  margin-top: 15px;
+	margin-top: 15px;
 }
+
 
 /* ANIMATIONS */
 
 .work-spotter {
-  background-color: rgb(250, 250, 250);
+	background-color: rgb(250, 250, 250);
 }
 
 .work-factsoftoday {
-  background-color: rgb(56, 56, 56);
-  color: rgb(245, 245, 245) !important;
-  .pill a {
-    color: rgb(250, 250, 250) !important;
-  }
-  li a {
-    color: rgba(255, 132, 13, 1);
-  }
-  .pill {
-    border-color: rgb(250, 250, 250) !important;
-  }
+	background-color: rgb(56, 56, 56);
+	color: rgb(245, 245, 245) !important;
+}
+
+.work-factsoftoday .pill a {
+	color: rgb(250, 250, 250) !important;
+}
+
+.work-factsoftoday li a {
+	color: rgba(255, 132, 13, 1);;
+}
+
+.work-factsoftoday .pill {
+	border-color: rgb(250, 250, 250) !important;
 }
 
 .work-medxport {
-  background-color: rgb(250, 250, 250);
+	background-color: rgb(250, 250, 250);
 }
 
 .work-mychef {
-  background-color: rgb(56, 56, 56);
-  color: rgb(245, 245, 245) !important;
-  .pill {
-    a {
-      color: rgb(250, 250, 250) !important;
-    }
-    border-color: rgb(250, 250, 250) !important;
-  }
+	background-color: rgb(56, 56, 56);
+	color: rgb(245, 245, 245) !important;
+}
+
+.work-mychef .pill a {
+	color: rgb(250, 250, 250) !important;
+}
+
+.work-mychef .pill {
+	border-color: rgb(250, 250, 250) !important;
 }
 
 /* rotate and fall */
 @-webkit-keyframes rotateFall {
-  0% {
-    -webkit-transform: rotateZ(0deg);
-  }
-
-  20% {
-    -webkit-transform: rotateZ(10deg);
-    -webkit-animation-timing-function: ease-out;
-  }
-
-  40% {
-    -webkit-transform: rotateZ(17deg);
-  }
-
-  60% {
-    -webkit-transform: rotateZ(24deg);
-  }
-
-  100% {
-    -webkit-transform: translateY(100%) rotateZ(17deg);
-  }
+	0% { -webkit-transform: rotateZ(0deg); }
+	20% { -webkit-transform: rotateZ(10deg); -webkit-animation-timing-function: ease-out; }
+	40% { -webkit-transform: rotateZ(17deg); }
+	60% { -webkit-transform: rotateZ(24deg); }
+	100% { -webkit-transform: translateY(100%) rotateZ(17deg); }
 }
-
-
 @-moz-keyframes rotateFall {
-  0% {
-    -moz-transform: rotateZ(0deg);
-  }
-
-  20% {
-    -moz-transform: rotateZ(10deg);
-    -moz-animation-timing-function: ease-out;
-  }
-
-  40% {
-    -moz-transform: rotateZ(17deg);
-  }
-
-  60% {
-    -moz-transform: rotateZ(16deg);
-  }
-
-  100% {
-    -moz-transform: translateY(100%) rotateZ(17deg);
-  }
+	0% { -moz-transform: rotateZ(0deg); }
+	20% { -moz-transform: rotateZ(10deg); -moz-animation-timing-function: ease-out; }
+	40% { -moz-transform: rotateZ(17deg); }
+	60% { -moz-transform: rotateZ(16deg); }
+	100% { -moz-transform: translateY(100%) rotateZ(17deg); }
 }
-
-
 @keyframes rotateFall {
-  0% {
-    transform: rotateZ(0deg);
-  }
-
-  20% {
-    transform: rotateZ(10deg);
-    animation-timing-function: ease-out;
-  }
-
-  40% {
-    transform: rotateZ(17deg);
-  }
-
-  60% {
-    transform: rotateZ(16deg);
-  }
-
-  100% {
-    transform: translateY(100%) rotateZ(17deg);
-  }
+	0% { transform: rotateZ(0deg); }
+	20% { transform: rotateZ(10deg); animation-timing-function: ease-out; }
+	40% { transform: rotateZ(17deg); }
+	60% { transform: rotateZ(16deg); }
+	100% { transform: translateY(100%) rotateZ(17deg); }
 }
-
 
 /* scale up */
 @keyframes scaleUp {
-  from {
-    opacity: 0.3;
-    transform: scale(0.8);
-  }
+	from 		{ opacity: 0.3; transform: scale(0.8); }
 }
-
-
 @-moz-keyframes scaleUp {
-  from {
-    opacity: 0.3;
-    -moz-transform: scale(0.8);
-  }
+	from 		{ opacity: 0.3; -moz-transform: scale(0.8); }
 }
-
-
 @-webkit-keyframes scaleUp {
-  from {
-    opacity: 0.3;
-    -webkit-transform: scale(0.8);
-  }
+	from 		{ opacity: 0.3; -webkit-transform: scale(0.8); }
 }
-
 
 /* slide in from the right */
 @keyframes slideInRight {
-  from {
-    transform: translateX(100%);
-  }
-
-  to {
-    transform: translateX(0);
-  }
+	from 	{ transform:translateX(100%); }
+	to 		{ transform: translateX(0); }
 }
-
-
 @-moz-keyframes slideInRight {
-  from {
-    -moz-transform: translateX(100%);
-  }
-
-  to {
-    -moz-transform: translateX(0);
-  }
+	from 	{ -moz-transform:translateX(100%); }
+	to 		{ -moz-transform: translateX(0); }
 }
-
-
 @-webkit-keyframes slideInRight {
-  from {
-    -webkit-transform: translateX(100%);
-  }
-
-  to {
-    -webkit-transform: translateX(0);
-  }
+	from 	{ -webkit-transform:translateX(100%); }
+	to 		{ -webkit-transform: translateX(0); }
 }
-
 
 /* slide in from the bottom */
 @keyframes slideInUp {
-  from {
-    transform: translateY(100%);
-  }
-
-  to {
-    transform: translateY(0);
-  }
+	from 	{ transform:translateY(100%); }
+	to 		{ transform: translateY(0); }
 }
-
-
 @-moz-keyframes slideInUp {
-  from {
-    -moz-transform: translateY(100%);
-  }
-
-  to {
-    -moz-transform: translateY(0);
-  }
+	from 	{ -moz-transform:translateY(100%); }
+	to 		{ -moz-transform: translateY(0); }
 }
-
-
 @-webkit-keyframes slideInUp {
-  from {
-    -webkit-transform: translateY(100%);
-  }
-
-  to {
-    -webkit-transform: translateY(0);
-  }
+	from 	{ -webkit-transform:translateY(100%); }
+	to 		{ -webkit-transform: translateY(0); }
 }
-
 
 /* slide out from the left */
 @keyframes slideOutLeft {
-  to {
-    transform: translateX(-100%);
-  }
+	to 		{ transform: translateX(-100%); }
 }
-
-
-@-moz-keyframes slideOutLeft {
-  to {
-    -moz-transform: translateX(-100%);
-  }
+@-moz-keyframes slideOutLeft {	
+	to 		{ -moz-transform: translateX(-100%); }
 }
-
-
 @-webkit-keyframes slideOutLeft {
-  to {
-    -webkit-transform: translateX(-100%);
-  }
+	to 		{ -webkit-transform: translateX(-100%); }
 }
-
 
 /* rotate out newspaper */
 @-webkit-keyframes rotateOutNewspaper {
-  to {
-    -webkit-transform: translateZ(-3000px) rotateZ(360deg);
-    opacity: 0;
-  }
+	to { -webkit-transform: translateZ(-3000px) rotateZ(360deg); opacity: 0; }
 }
-
-
 @-moz-keyframes rotateOutNewspaper {
-  to {
-    -moz-transform: translateZ(-3000px) rotateZ(360deg);
-    opacity: 0;
-  }
+	to { -moz-transform: translateZ(-3000px) rotateZ(360deg); opacity: 0; }
 }
-
-
 @keyframes rotateOutNewspaper {
-  to {
-    transform: translateZ(-3000px) rotateZ(360deg);
-    opacity: 0;
-  }
+	to { transform: translateZ(-3000px) rotateZ(360deg); opacity: 0; }
 }
-
 
 /* fade out */
 
 @keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-  }
+	from 	{ opacity: 1; }
+	to 		{ opacity: 0; }
 }
-
-
 @-moz-keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-  }
+	from 	{ opacity: 1; }
+	to 		{ opacity: 0; }
 }
-
-
 @-webkit-keyframes Out {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-  }
+	from 	{ opacity: 1; }
+	to 		{ opacity: 0; }
 }
-
 
 /* fade in */
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
+	from 	{ opacity: 0; }
+	to 		{ opacity: 1; }
 }
-
-
 @-moz-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
+	from 	{ opacity: 0; }
+	to 		{ opacity: 1; }
 }
-
-
 @-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
+	from 	{ opacity: 0; }
+	to 		{ opacity: 1; }
 }
-
 
 /* this is enough im tired of making animations */
 
 /* Main -------------------------- */
+.work-home.ng-leave {
+	-webkit-animation:fadeOut 0.5s both ease-in;
+	-moz-animation:fadeOut 0.5s both ease-in;
+	animation:fadeOut 0.5s both ease-in;   
+}
 
-.work-home {
-  &.ng-leave {
-    -webkit-animation: fadeOut 0.5s both ease-in;
-    -moz-animation: fadeOut 0.5s both ease-in;
-    animation: fadeOut 0.5s both ease-in;
-  }
-  &.ng-enter {
-    -webkit-animation: fadeIn 0.5s both ease-in;
-    -moz-animation: fadeIn 0.5s both ease-in;
-    animation: fadeIn 0.5s both ease-in;
-  }
+.work-home.ng-enter {
+	-webkit-animation:fadeIn 0.5s both ease-in;
+	-moz-animation:fadeIn 0.5s both ease-in;
+	animation:fadeIn 0.5s both ease-in;  
 }
 
 /* FactsOfToday -------------------------- */
-
-.work-factsoftoday, .work-mychef, .work-spotter, .work-medxport {
-  &.ng-leave {
-    -webkit-animation: slideOutLeft 0.5s both ease-in;
-    -moz-animation: slideOutLeft 0.5s both ease-in;
-    animation: slideOutLeft 0.5s both ease-in;
-  }
-  &.ng-enter {
-    -webkit-animation: slideInRight 0.5s both ease-in;
-    -moz-animation: slideInRight 0.5s both ease-in;
-    animation: slideInRight 0.5s both ease-in;
-  }
+.work-factsoftoday.ng-leave {
+    -webkit-animation:slideOutLeft 0.5s both ease-in;
+	-moz-animation:slideOutLeft 0.5s both ease-in;
+	animation:slideOutLeft 0.5s both ease-in;   
+}
+.work-factsoftoday.ng-enter {  
+    -webkit-animation:slideInRight 0.5s both ease-in;
+	-moz-animation:slideInRight 0.5s both ease-in;
+	animation:slideInRight 0.5s both ease-in;    
 }
 
 /* myChef ------------------------ */
+.work-mychef.ng-leave {
+    -webkit-animation:slideOutLeft 0.5s both ease-in;
+	-moz-animation:slideOutLeft 0.5s both ease-in;
+	animation:slideOutLeft 0.5s both ease-in;   
+}
+.work-mychef.ng-enter {  
+    -webkit-animation:slideInRight 0.5s both ease-in;
+	-moz-animation:slideInRight 0.5s both ease-in;
+	animation:slideInRight 0.5s both ease-in;    
+}
 
 /* Spotter ---------------------- */
+.work-spotter.ng-leave {
+    -webkit-animation:slideOutLeft 0.5s both ease-in;
+	-moz-animation:slideOutLeft 0.5s both ease-in;
+	animation:slideOutLeft 0.5s both ease-in;   
+}
+.work-spotter.ng-enter {  
+    -webkit-animation:slideInRight 0.5s both ease-in;
+	-moz-animation:slideInRight 0.5s both ease-in;
+	animation:slideInRight 0.5s both ease-in;    
+}
 
 /* MedxPort ------------------------ */
-
-@media only screen and (max-width: 1500px) {
-  .name {
-    font-size: 40px;
-  }
-  .infoWrapper {
-    width: 600px;
-  }
-  .typerInfo {
-    font-size: 19px;
-  }
-  #home .social a {
-    width: 52px;
-    height: 52px;
-    font-size: 28px;
-    padding-top: 8px;
-  }
-  .navbar-header {
-    padding-left: 20px;
-  }
-  .navbar .navbar-brand {
-    font-size: 28px;
-  }
-  .onMobileBrand {
-    padding: 15px 0px 0px 15px !important;
-  }
-  .onMobileButton {
-    margin-top: 9px;
-  }
-  .navbar li a {
-    padding: 32px 30px;
-  }
-  #about h1, #work h1 {
-    text-align: center;
-    font-size: 70px;
-    font-family: Open Sans;
-    margin: 0px;
-  }
-  #about .social, #work .social {
-    width: 270px;
-  }
-  #about .social a, #work .social a {
-    width: 80px;
-    height: 80px;
-    font-size: 45px;
-    padding-top: 13px;
-    padding-left: 19px;
-  }
-  .aboutMe p {
-    font-size: 20px;
-  }
-  #about .fa-facebook {
-    padding-top: 1px;
-    margin-left: 5px;
-  }
-  .fa-linkedin {
-    padding-top: -2px;
-    padding-left: 3px;
-  }
-  .fa-envelope-o {
-    margin-left: -2px;
-  }
-  .logorow {
-    height: 250px;
-    margin-top: 10%;
-    position: relative;
-    .logo {
-      background-image: url(../img/spotter.png);
-      background-size: 400px 400px;
-      width: 400px;
-      height: 400px;
-      border-radius: 40px;
-      display: inline-block;
-      margin-left: 18%;
-      margin-bottom: 10%;
-      overflow: hidden;
-      position: relative;
-      -webkit-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-      -moz-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-      box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-    }
-    .logo2 {
-      background: url(../img/factsoftoday.svg) white;
-      background-repeat: no-repeat;
-      background-size: 350px 350px;
-      background-position: center;
-      width: 400px;
-      height: 400px;
-      border-radius: 40px;
-      display: inline-block;
-      margin-bottom: 10%;
-      margin-right: 16%;
-      overflow: hidden;
-      position: relative;
-      -webkit-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-      -moz-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-      box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-    }
-    .logo3 {
-      background: url(../img/medxport.jpg) white;
-      background-repeat: no-repeat;
-      background-size: 400px 117px;
-      background-position: center;
-      width: 400px;
-      height: 400px;
-      border-radius: 40px;
-      display: inline-block;
-      margin-left: 18%;
-      margin-bottom: 10%;
-      overflow: hidden;
-      position: relative;
-      -webkit-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-      -moz-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-      box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-    }
-    .logo4 {
-      background-image: url(../img/mychef.png);
-      background-size: 400px 400px;
-      border-radius: 40px;
-      display: inline-block;
-      width: 400px;
-      height: 400px;
-      margin-bottom: 10%;
-      margin-right: 17%;
-      overflow: hidden;
-      position: relative;
-      -webkit-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-      -moz-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-      box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-    }
-  }
-  #work {
-    .cancel {
-      position: absolute;
-      display: inline-block;
-      margin-top: 15px;
-      margin-left: 5px;
-      img {
-        width: 16px;
-        height: 16px;
-      }
-    }
-    h1.projecttitle {
-      font-size: 50px;
-      margin-top: 30px;
-    }
-    .screenshot {
-      width: 100%;
-      height: 100%;
-      margin-top: 25px;
-      display: block;
-      margin: 25px auto 0px auto;
-      width: 100%;
-      height: 100%;
-      margin-top: 25px;
-      display: block;
-      margin: 25px auto 0px auto;
-    }
-    .pill {
-      margin-top: 10px;
-      /*padding: 15px 40px;*/
-      border-radius: 500px;
-      border: 1px solid black;
-      overflow: hidden;
-      margin-left: 50px;
-      margin-bottom: 15px;
-      a {
-        display: block;
-        width: 250px;
-        height: 55px;
-        line-height: 50px;
-        font-size: 24px;
-        text-align: center;
-        color: black;
-      }
-    }
-    h3 {
-      font-size: 24px;
-      display: inline-block;
-      line-height: 50px;
-      margin-top: 15px;
-      margin-bottom: 0px;
-    }
-    .description {
-      p, ul {
-        font-size: 18px;
-      }
-    }
-  }
+.work-medxport.ng-leave {
+    -webkit-animation:slideOutLeft 0.5s both ease-in;
+	-moz-animation:slideOutLeft 0.5s both ease-in;
+	animation:slideOutLeft 0.5s both ease-in;   
+}
+.work-medxport.ng-enter {  
+    -webkit-animation:slideInRight 0.5s both ease-in;
+	-moz-animation:slideInRight 0.5s both ease-in;
+	animation:slideInRight 0.5s both ease-in;    
 }
 
-@media only screen and (max-width: 768px) {
-  .name {
-    font-size: 80px;
-  }
-  .infoWrapper {
-    width: 600px;
-  }
-  .typerInfo {
-    /*font-size: 18px;*/
-  }
-  #home .social a {
-    width: 52px;
-    height: 52px;
-    font-size: 28px;
-    padding-top: 8px;
-  }
-  .navbar-header {
-    padding-left: 20px;
-  }
-  .navbar .navbar-brand {
-    font-size: 28px;
-  }
-  .onMobileBrand {
-    padding: 15px 0px 0px 15px !important;
-  }
-  .onMobileButton {
-    margin-top: 9px;
-  }
-  .navbar li a {
-    padding: 32px 30px;
-  }
-  #about {
-    h1 {
-      text-align: center;
-      font-size: 80px;
-      font-family: Open Sans;
-      margin: 0px;
-    }
-    .social {
-      width: 400px;
-    }
-  }
-  #work .social {
-    width: 400px;
-  }
-  #about .social a, #work .social a {
-    width: 110px;
-    height: 110px;
-    font-size: 70px;
-    padding-top: 18px;
-    padding-left: 23px;
-  }
-  .aboutMe p {
-    font-size: 24px;
-  }
-  .fa-facebook {
-    padding-top: 1px;
-    padding-left: 4px;
-  }
-  .fa-linkedin {
-    padding-top: -2px;
-    padding-left: 3px;
-  }
-  .fa-envelope-o {
-    margin-left: -2px;
-  }
-  .logorow {
-    height: 250px;
-    margin-top: 10%;
-    position: relative;
-    .logo {
-      background-image: url(../img/spotter.png);
-      background-size: 400px 400px;
-      width: 400px;
-      height: 400px;
-      border-radius: 40px;
-      display: inline-block;
-      margin-left: 25%;
-      margin-bottom: 10%;
-      overflow: hidden;
-      position: relative;
-      -webkit-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-      -moz-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-      box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-    }
-    .logo2 {
-      background: url(../img/factsoftoday.svg) white;
-      background-repeat: no-repeat;
-      background-size: 350px 350px;
-      background-position: center;
-      width: 400px;
-      height: 400px;
-      border-radius: 40px;
-      display: inline-block;
-      margin-bottom: 10%;
-      margin-right: 21%;
-      overflow: hidden;
-      position: relative;
-      -webkit-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-      -moz-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-      box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-    }
-    .logo3 {
-      background: url(../img/medxport.jpg) white;
-      background-repeat: no-repeat;
-      background-size: 400px 117px;
-      background-position: center;
-      width: 400px;
-      height: 400px;
-      border-radius: 40px;
-      display: inline-block;
-      margin-left: 25%;
-      margin-bottom: 10%;
-      overflow: hidden;
-      position: relative;
-      -webkit-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-      -moz-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-      box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-    }
-    .logo4 {
-      background-image: url(../img/mychef.png);
-      background-size: 400px 400px;
-      border-radius: 40px;
-      display: inline-block;
-      width: 400px;
-      height: 400px;
-      margin-bottom: 10%;
-      margin-right: 21%;
-      overflow: hidden;
-      position: relative;
-      -webkit-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-      -moz-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-      box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-    }
-  }
-  .aboutMeSectionFirst, .aboutMeSection, .aboutMeSectionAlt {
-    padding: 25px 25px 0px 25px;
-  }
-  .aboutMe {
-    h2 {
-      margin: 0px 2px 0px 2px;
-    }
-    p {
-      margin-bottom: 0px;
-      padding-bottom: 25px;
-    }
-    .frame {
-      text-align: center;
-    }
-  }
-  #work .description {
-    p, ul {
-      font-size: 20px;
-    }
-  }
-  .social-icons a {
-    opacity: 1 !important;
-    -webkit-transform: scale(1) !important;
-    -moz-transform: scale(1) !important;
-    -ms-transform: scale(1) !important;
-    -o-transform: scale(1) !important;
-    transform: scale(1) !important;
-    color: rgba(9, 112, 84, 1) !important;
-  }
-}
 
-@media only screen and (max-width: 424px) {
-  .name {
-    font-size: 40px;
-  }
-  .infoWrapper {
-    width: 275px;
-  }
-  .typerInfo {
-    font-size: 14px;
-  }
-  #home .social a {
-    width: 44px;
-    height: 44px;
-    font-size: 20px;
-    padding-top: 5px;
-  }
-  #about {
-    .social {
-      a {
-        width: 58px;
-        height: 58px;
-        font-size: 36px;
-        padding-left: 12px;
-        padding-top: 8px;
-      }
-      width: 200px;
-      margin: 75px auto 0px auto;
-    }
-    h1 {
-      text-align: center;
-      font-size: 50px;
-      font-family: Open Sans;
-      margin: 0px;
-    }
-  }
-  .aboutMe p {
-    font-size: 16px;
-  }
-  #work {
-    h1 {
-      top: 30%;
-      font-size: 50px;
-    }
-    .social {
-      width: 200px;
-      margin: 75px auto 0px auto;
-      a {
-        width: 58px;
-        height: 58px;
-        font-size: 36px;
-        padding-left: 12px;
-        padding-top: 8px;
-      }
-    }
-  }
-  #about .fa-facebook {
-    margin-left: 0px;
-  }
-  .onMobileBrand {
-    padding: 15px 0px 0px 0px !important;
-  }
-  .logorow {
-    height: 250px;
-    margin-top: 10%;
-    position: relative;
-    height: 300px;
-    margin-top: 10%;
-    position: relative;
-    .logo {
-      background-image: url(../img/spotter.png);
-      width: 300px;
-      height: 300px;
-      background-size: 300px 300px;
-      border-radius: 40px;
-      display: inline-block;
-      margin-left: 10%;
-      overflow: hidden;
-      position: relative;
-      -webkit-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-      -moz-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-      box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-    }
-    .logo2 {
-      background: url(../img/factsoftoday.svg) white;
-      background-repeat: no-repeat;
-      background-size: 250px 250px;
-      background-position: center;
-      width: 300px;
-      height: 300px;
-      border-radius: 40px;
-      display: inline-block;
-      margin-right: 10%;
-      /*overflow: hidden;*/
-      position: relative;
-      -webkit-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-      -moz-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-      box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-    }
-    .logo3 {
-      background: url(../img/medxport.jpg) white;
-      background-repeat: no-repeat;
-      background-size: 300px 88px;
-      background-position: center;
-      width: 300px;
-      height: 300px;
-      border-radius: 40px;
-      display: inline-block;
-      margin-left: 10%;
-      overflow: hidden;
-      position: relative;
-      -webkit-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-      -moz-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-      box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-    }
-    .logo4 {
-      background-image: url(../img/mychef.png);
-      width: 300px;
-      height: 300px;
-      background-size: cover;
-      border-radius: 40px;
-      display: inline-block;
-      margin-right: 10%;
-      overflow: hidden;
-      position: relative;
-      -webkit-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-      -moz-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-      box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-    }
-  }
-  .aboutMeSectionFirst, .aboutMeSection, .aboutMeSectionAlt {
-    padding: 25px 25px 0px 25px;
-  }
-  .aboutMe {
-    h2 {
-      margin: 0px 2px 0px 2px;
-    }
-    p {
-      margin-bottom: 0px;
-      padding-bottom: 25px;
-    }
-    .frame {
-      text-align: center;
-    }
-  }
-  #work {
-    .cancel {
-      position: absolute;
-      display: inline-block;
-      margin-top: 15px;
-      margin-left: 5px;
-      img {
-        width: 16px;
-        height: 16px;
-      }
-    }
-    h1.projecttitle {
-      font-size: 50px;
-      margin-top: 30px;
-    }
-    .screenshot {
-      width: 100%;
-      height: 100%;
-      margin-top: 25px;
-      display: block;
-      margin: 25px auto 0px auto;
-    }
-    .pill {
-      margin-top: 10px;
-      /*padding: 15px 40px;*/
-      border-radius: 500px;
-      border: 1px solid black;
-      overflow: hidden;
-      margin-left: 98px;
-      margin-bottom: 15px;
-      a {
-        display: block;
-        width: 200px;
-        height: 37.5px;
-        line-height: 37.5px;
-        text-align: center;
-        color: black;
-        font-size: 16px;
-      }
-    }
-    h3 {
-      font-size: 20px;
-      display: inline-block;
-      line-height: 25px;
-      margin-top: 15px;
-      margin-bottom: 0px;
-    }
-    .container-fluid .pull-right {
-      float: left !important;
-    }
-  }
-}
+	@media only screen and (max-width: 1500px) {
+		.name {
+			font-size: 40px;
+		}
 
-@media only screen and (max-width: 375px) {
-  .name {
-    font-size: 40px;
-  }
-  .infoWrapper {
-    width: 275px;
-  }
-  .typerInfo {
-    font-size: 14px;
-  }
-  #home .social a {
-    width: 44px;
-    height: 44px;
-    font-size: 20px;
-    padding-top: 5px;
-  }
-  #about {
-    .social {
-      a {
-        width: 58px;
-        height: 58px;
-        font-size: 36px;
-        padding-left: 12px;
-        padding-top: 8px;
-      }
-      width: 200px;
-      margin: 75px auto 0px auto;
-    }
-    h1 {
-      text-align: center;
-      font-size: 50px;
-      font-family: Open Sans;
-      margin: 0px;
-    }
-  }
-  .aboutMe p {
-    font-size: 16px;
-  }
-  #work {
-    h1 {
-      top: 30%;
-      font-size: 50px;
-    }
-    .social {
-      width: 200px;
-      margin: 75px auto 0px auto;
-      a {
-        width: 58px;
-        height: 58px;
-        font-size: 36px;
-        padding-left: 12px;
-        padding-top: 8px;
-      }
-    }
-  }
-  #about .fa-facebook {
-    margin-left: 0px;
-  }
-  .onMobileBrand {
-    padding: 15px 0px 0px 0px !important;
-  }
-  .logorow {
-    height: 250px;
-    margin-top: 10%;
-    position: relative;
-    .logo {
-      background-image: url(../img/spotter.png);
-      background-size: 275px 275px;
-      width: 275px;
-      height: 275px;
-      border-radius: 40px;
-      display: inline-block;
-      margin-left: 10%;
-      margin-bottom: 10%;
-      overflow: hidden;
-      position: relative;
-      -webkit-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-      -moz-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-      box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-    }
-    .logo2 {
-      background: url(../img/factsoftoday.svg) white;
-      background-repeat: no-repeat;
-      background-size: 225px 225px;
-      background-position: center;
-      width: 275px;
-      height: 275px;
-      border-radius: 40px;
-      display: inline-block;
-      margin-bottom: 10%;
-      margin-right: 10%;
-      overflow: hidden;
-      position: relative;
-      -webkit-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-      -moz-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-      box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-    }
-    .logo3 {
-      background: url(../img/medxport.jpg) white;
-      background-repeat: no-repeat;
-      background-size: 275px 81px;
-      background-position: center;
-      width: 275px;
-      height: 275px;
-      border-radius: 40px;
-      display: inline-block;
-      margin-left: 10%;
-      margin-bottom: 10%;
-      overflow: hidden;
-      position: relative;
-      -webkit-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-      -moz-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-      box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-    }
-    .logo4 {
-      background-image: url(../img/mychef.png);
-      background-size: 275px 275px;
-      width: 275px;
-      height: 275px;
-      border-radius: 40px;
-      display: inline-block;
-      margin-bottom: 10%;
-      margin-right: 10%;
-      overflow: hidden;
-      position: relative;
-      -webkit-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-      -moz-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-      box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-    }
-  }
-  .aboutMeSectionFirst, .aboutMeSection, .aboutMeSectionAlt {
-    padding: 25px 25px 0px 25px;
-  }
-  .aboutMe {
-    h2 {
-      margin: 0px 2px 0px 2px;
-    }
-    p {
-      margin-bottom: 0px;
-      padding-bottom: 25px;
-    }
-    .frame {
-      text-align: center;
-    }
-  }
-}
+		.infoWrapper {
+			width: 600px;
+		}
 
-@media only screen and (max-width: 360px) {
-  .name {
-    font-size: 40px;
-  }
-  .infoWrapper {
-    width: 275px;
-  }
-  .typerInfo {
-    font-size: 14px;
-  }
-  #home .social a {
-    width: 44px;
-    height: 44px;
-    font-size: 20px;
-    padding-top: 5px;
-  }
-  #about {
-    .social {
-      a {
-        width: 58px;
-        height: 58px;
-        font-size: 36px;
-        padding-left: 12px;
-        padding-top: 8px;
-      }
-      width: 200px;
-      margin: 75px auto 0px auto;
-    }
-    h1 {
-      text-align: center;
-      font-size: 50px;
-      font-family: Open Sans;
-      margin: 0px;
-    }
-  }
-  .aboutMe p {
-    font-size: 16px;
-  }
-  #work {
-    h1 {
-      top: 30%;
-      font-size: 50px;
-    }
-    .social {
-      width: 200px;
-      margin: 75px auto 0px auto;
-      a {
-        width: 58px;
-        height: 58px;
-        font-size: 36px;
-        padding-left: 12px;
-        padding-top: 8px;
-      }
-    }
-  }
-  #about .fa-facebook {
-    margin-left: 0px;
-  }
-  .onMobileBrand {
-    padding: 15px 0px 0px 0px !important;
-  }
-  .logorow {
-    height: 250px;
-    margin-top: 10%;
-    position: relative;
-    .logo {
-      background-image: url(../img/spotter.png);
-      background-size: 275px 275px;
-      width: 275px;
-      height: 275px;
-      border-radius: 40px;
-      display: inline-block;
-      margin-left: 7%;
-      margin-bottom: 10%;
-      overflow: hidden;
-      position: relative;
-      -webkit-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-      -moz-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-      box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-    }
-    .logo2 {
-      background: url(../img/factsoftoday.svg) white;
-      background-repeat: no-repeat;
-      background-size: 225px 225px;
-      background-position: center;
-      width: 275px;
-      height: 275px;
-      border-radius: 40px;
-      display: inline-block;
-      margin-bottom: 10%;
-      margin-right: 9%;
-      overflow: hidden;
-      position: relative;
-      -webkit-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-      -moz-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-      box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-    }
-    .logo3 {
-      background: url(../img/medxport.jpg) white;
-      background-repeat: no-repeat;
-      background-size: 275px 81px;
-      background-position: center;
-      width: 275px;
-      height: 275px;
-      border-radius: 40px;
-      display: inline-block;
-      margin-left: 7%;
-      margin-bottom: 10%;
-      overflow: hidden;
-      position: relative;
-      -webkit-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-      -moz-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-      box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-    }
-    .logo4 {
-      background-image: url(../img/mychef.png);
-      background-size: 275px 275px;
-      width: 275px;
-      height: 275px;
-      border-radius: 40px;
-      display: inline-block;
-      margin-bottom: 10%;
-      margin-right: 9%;
-      overflow: hidden;
-      position: relative;
-      -webkit-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-      -moz-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-      box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-    }
-  }
-  .aboutMeSectionFirst, .aboutMeSection, .aboutMeSectionAlt {
-    padding: 25px 25px 0px 25px;
-  }
-  .aboutMe {
-    h2 {
-      margin: 0px 2px 0px 2px;
-    }
-    p {
-      margin-bottom: 0px;
-      padding-bottom: 25px;
-    }
-    .frame {
-      text-align: center;
-    }
-  }
-}
+		.typerInfo {
+			font-size: 19px;
+		}
 
-@media only screen and (max-width: 320px) {
-  .name {
-    font-size: 40px;
-  }
-  .infoWrapper {
-    width: 275px;
-  }
-  .typerInfo {
-    font-size: 14px;
-  }
-  #home .social a {
-    width: 44px;
-    height: 44px;
-    font-size: 20px;
-    padding-top: 5px;
-  }
-  #about {
-    .social {
-      a {
-        width: 58px;
-        height: 58px;
-        font-size: 36px;
-        padding-left: 12px;
-        padding-top: 8px;
-      }
-      width: 200px;
-      margin: 75px auto 0px auto;
-    }
-    h1 {
-      text-align: center;
-      font-size: 50px;
-      font-family: Open Sans;
-      margin: 0px;
-    }
-  }
-  .aboutMe p {
-    font-size: 16px;
-  }
-  #work {
-    h1 {
-      top: 30%;
-      font-size: 50px;
-    }
-    .social {
-      width: 200px;
-      margin: 75px auto 0px auto;
-      a {
-        width: 58px;
-        height: 58px;
-        font-size: 36px;
-        padding-left: 12px;
-        padding-top: 8px;
-      }
-    }
-  }
-  #about .fa-facebook {
-    margin-left: 0px;
-  }
-  .onMobileBrand {
-    padding: 15px 0px 0px 0px !important;
-  }
-  .logorow {
-    height: 250px;
-    margin-top: 10%;
-    position: relative;
-    .logo {
-      background-image: url(../img/spotter.png);
-      background-size: 250px 250px;
-      width: 250px;
-      height: 250px;
-      border-radius: 40px;
-      display: inline-block;
-      margin-left: 7%;
-      margin-bottom: 10%;
-      overflow: hidden;
-      position: relative;
-      -webkit-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-      -moz-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-      box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-    }
-    .logo2 {
-      background: url(../img/factsoftoday.svg) white;
-      background-repeat: no-repeat;
-      background-size: 200px 200px;
-      background-position: center;
-      width: 250px;
-      height: 250px;
-      border-radius: 40px;
-      display: inline-block;
-      margin-bottom: 10%;
-      margin-right: 7%;
-      overflow: hidden;
-      position: relative;
-      -webkit-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-      -moz-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-      box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-    }
-    .logo3 {
-      background: url(../img/medxport.jpg) white;
-      background-repeat: no-repeat;
-      background-size: 250px 73px;
-      background-position: center;
-      width: 250px;
-      height: 250px;
-      border-radius: 40px;
-      display: inline-block;
-      margin-left: 7%;
-      margin-bottom: 10%;
-      overflow: hidden;
-      position: relative;
-      -webkit-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-      -moz-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-      box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-    }
-    .logo4 {
-      background-image: url(../img/mychef.png);
-      background-size: 250px 250px;
-      width: 250px;
-      height: 250px;
-      border-radius: 40px;
-      display: inline-block;
-      margin-bottom: 10%;
-      margin-right: 7%;
-      overflow: hidden;
-      position: relative;
-      -webkit-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-      -moz-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-      box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.21);
-    }
-  }
-  .aboutMeSectionFirst, .aboutMeSection, .aboutMeSectionAlt {
-    padding: 25px 15px 0px 15px;
-  }
-  .aboutMe {
-    h2 {
-      margin: 0px 2px 0px 2px;
-    }
-    p {
-      margin-bottom: 0px;
-      padding-bottom: 25px;
-    }
-    .frame {
-      text-align: center;
-    }
-  }
-  #work .pill {
-    margin-left: 50px;
-  }
+		#home .social a {
+			width: 52px;
+			height: 52px;
+			font-size: 28px;
+			padding-top: 8px;
+		}
+
+		.navbar-header {
+			padding-left: 20px;
+		}
+
+		.navbar .navbar-brand {
+			font-size: 28px;
+		}
+
+		.onMobileBrand {
+			padding: 15px 0px 0px 15px !important;
+		}
+
+		.onMobileButton {
+			margin-top: 9px;
+		}
+
+		.navbar li a {
+			padding: 32px 30px;
+		}
+
+		#about h1 {
+			text-align: center;
+			font-size: 70px;
+			font-family: Open Sans;
+			margin: 0px;
+		}
+
+		#work h1 {
+			text-align: center;
+			font-size: 70px;
+			font-family: Open Sans;
+			margin: 0px;
+		}
+
+		#about .social {
+			width: 270px;
+		}
+
+		#work .social {
+			width: 270px;
+		}
+
+		#about .social a, #work .social a {
+			width: 80px;
+			height: 80px;
+			font-size: 45px;
+			padding-top: 13px;
+			padding-left: 19px;
+		}
+
+		.aboutMe {
+			
+		}
+
+		.aboutMe p {
+			font-size: 20px;
+		}
+
+		#about .fa-facebook {
+			padding-top: 1px;
+			margin-left: 5px;
+		}
+
+		.fa-linkedin {
+			padding-top: -2px;
+			padding-left: 3px;
+		}
+
+		.fa-envelope-o {
+			margin-left: -2px;
+		}
+
+		.logorow {
+			height: 250px;
+			margin-top:10%;
+			position: relative;
+		}
+
+		.logorow .logo {
+			background-image: url(../img/spotter.png);
+			background-size: 400px 400px;
+			width: 400px;
+			height: 400px;
+			border-radius: 40px;
+			display: inline-block;
+			margin-left: 18%;
+			margin-bottom: 10%;
+			overflow: hidden;
+			position: relative;
+			-webkit-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+			-moz-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+			box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+		}
+
+		.logorow .logo2 {
+			background: url(../img/factsoftoday.svg) white;
+			background-repeat: no-repeat;
+			background-size: 350px 350px;
+			background-position: center;
+			width: 400px;
+			height: 400px;
+			border-radius: 40px;
+			display: inline-block;
+			margin-bottom: 10%;
+			margin-right: 16%;
+			overflow: hidden;
+			position: relative;
+			-webkit-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+			-moz-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+			box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+		}
+
+		.logorow .logo3 {
+			background: url(../img/medxport.jpg) white;
+			background-repeat: no-repeat;
+			background-size: 400px 117px;
+			background-position: center;
+			width: 400px;
+			height: 400px;
+			border-radius: 40px;
+			display: inline-block;
+			margin-left: 18%;
+			margin-bottom: 10%;
+			overflow: hidden;
+			position: relative;
+			-webkit-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+			-moz-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+			box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+		}
+
+		.logorow .logo4 {
+			background-image: url(../img/mychef.png);
+			background-size: 400px 400px;
+			border-radius: 40px;
+			display: inline-block;
+			width: 400px;
+			height: 400px;
+			margin-bottom: 10%;
+			margin-right: 17%;
+			overflow: hidden;
+			position: relative;
+			-webkit-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+			-moz-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+			box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+		}
+
+		#work .cancel {
+		position: absolute;
+		display: inline-block;
+		margin-top: 15px;
+		margin-left:5px;
+	}
+
+	#work .cancel img{
+		width: 16px;
+		height: 16px;
+	}
+
+	#work h1.projecttitle {
+		font-size: 50px;
+		margin-top:30px;
+	}
+
+	#work .screenshot {
+		width: 100%;
+		height: 100%;
+		margin-top: 25px;
+		display: block;
+		margin: 25px auto 0px auto;
+	}
+
+	#work .screenshot {
+		width: 100%;
+		height: 100%;
+		margin-top: 25px;
+		display: block;
+		margin: 25px auto 0px auto;
+	}
+
+	#work .pill {
+		margin-top: 10px;
+		/*padding: 15px 40px;*/
+		border-radius: 500px;
+		border: 1px solid black;
+		overflow: hidden;
+		margin-left: 50px;
+		margin-bottom: 15px;
+	}
+
+	#work .pill a {
+		display: block;
+		width: 250px;
+		height: 55px;
+		line-height: 50px;
+		font-size: 24px;
+		text-align: center;
+		color: black;
+	}
+
+	#work h3 {
+		font-size: 24px;
+		display: inline-block;
+		line-height: 50px;
+		margin-top: 15px;
+		margin-bottom: 0px;
+	}
+
+	#work .description p, #work .description ul {
+		font-size: 18px;
+	}
+	}
+
+	@media only screen and (max-width: 768px) {
+		.name {
+			font-size: 80px;
+		}
+
+		.infoWrapper {
+			width: 600px;
+		}
+
+		.typerInfo {
+			/*font-size: 18px;*/
+		}
+
+		#home .social a {
+			width: 52px;
+			height: 52px;
+			font-size: 28px;
+			padding-top: 8px;
+		}
+
+		.navbar-header {
+			padding-left: 20px;
+		}
+
+		.navbar .navbar-brand {
+			font-size: 28px;
+		}
+
+		.onMobileBrand {
+			padding: 15px 0px 0px 15px !important;
+		}
+
+		.onMobileButton {
+			margin-top: 9px;
+		}
+
+		.navbar li a {
+			padding: 32px 30px;
+		}
+
+		#about h1 {
+			text-align: center;
+			font-size: 80px;
+			font-family: Open Sans;
+			margin: 0px;
+		}
+
+		#about .social {
+			width: 400px;
+		}
+
+		#work .social {
+			width: 400px;
+		}
+
+		#about .social a, #work .social a {
+			width: 110px;
+			height: 110px;
+			font-size: 70px;
+			padding-top: 18px;
+			padding-left: 23px;
+		}
+
+		.aboutMe {
+			
+		}
+
+		.aboutMe p {
+			font-size: 24px;
+		}
+
+		.fa-facebook {
+			padding-top: 1px;
+			padding-left: 4px;
+		}
+
+		.fa-linkedin {
+			padding-top: -2px;
+			padding-left: 3px;
+		}
+
+		.fa-envelope-o {
+			margin-left: -2px;
+		}
+
+		.logorow {
+			height: 250px;
+			margin-top:10%;
+			position: relative;
+		}
+
+		.logorow .logo {
+			background-image: url(../img/spotter.png);
+			background-size: 400px 400px;
+			width: 400px;
+			height: 400px;
+			border-radius: 40px;
+			display: inline-block;
+			margin-left: 25%;
+			margin-bottom: 10%;
+			overflow: hidden;
+			position: relative;
+			-webkit-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+			-moz-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+			box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+		}
+
+		.logorow .logo2 {
+			background: url(../img/factsoftoday.svg) white;
+			background-repeat: no-repeat;
+			background-size: 350px 350px;
+			background-position: center;
+			width: 400px;
+			height: 400px;
+			border-radius: 40px;
+			display: inline-block;
+			margin-bottom: 10%;
+			margin-right: 21%;
+			overflow: hidden;
+			position: relative;
+			-webkit-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+			-moz-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+			box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+		}
+
+		.logorow .logo3 {
+			background: url(../img/medxport.jpg) white;
+			background-repeat: no-repeat;
+			background-size: 400px 117px;
+			background-position: center;
+			width: 400px;
+			height: 400px;
+			border-radius: 40px;
+			display: inline-block;
+			margin-left: 25%;
+			margin-bottom: 10%;
+			overflow: hidden;
+			position: relative;
+			-webkit-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+			-moz-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+			box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+		}
+
+		.logorow .logo4 {
+			background-image: url(../img/mychef.png);
+			background-size: 400px 400px;
+			border-radius: 40px;
+			display: inline-block;
+			width: 400px;
+			height: 400px;
+			margin-bottom: 10%;
+			margin-right: 21%;
+			overflow: hidden;
+			position: relative;
+			-webkit-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+			-moz-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+			box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+		}
+
+		.aboutMeSectionFirst {
+			padding: 25px 25px 0px 25px;
+		}
+
+		.aboutMeSection {
+			padding: 25px 25px 0px 25px;
+		}
+
+		.aboutMeSectionAlt {
+			padding: 25px 25px 0px 25px;
+		}
+
+		.aboutMe h2{
+			margin: 0px 2px 0px 2px;
+		}
+
+		.aboutMe p{
+			margin-bottom: 0px;
+			padding-bottom: 25px;
+		}
+
+		.aboutMe .frame {
+			text-align: center;
+		}
+
+		#work .description p {
+			font-size: 20px;
+		}
+
+		#work .description ul {
+			font-size: 20px;
+		}
+
+		.social-icons a {
+	opacity: 1 !important;
+	-webkit-transform: scale(1) !important;
+	   -moz-transform: scale(1) !important;
+		-ms-transform: scale(1) !important;
+		 -o-transform: scale(1) !important;
+			transform: scale(1) !important;
+			color: rgba(9, 112, 84, 1) !important;
 }
+	}
+
+	@media only screen and (max-width: 424px) {
+
+		.name {
+			font-size: 40px;
+		}
+
+		.infoWrapper {
+			width: 275px;
+		}
+
+		.typerInfo {
+			font-size: 14px;
+		}
+
+		#home .social a {
+			width: 44px;
+			height: 44px;
+			font-size: 20px;
+			padding-top: 5px;
+		}
+
+		#about .social a {
+			width: 58px;
+			height: 58px;
+			font-size: 36px;
+			padding-left: 12px;
+			padding-top: 8px;
+		}
+
+		#about .social {
+			width: 200px;
+			margin: 75px auto 0px auto;
+		}
+
+		#about h1 {
+			text-align: center;
+			font-size: 50px;
+			font-family: Open Sans;
+			margin: 0px;
+		}
+
+		.aboutMe {
+
+			
+		}
+
+		.aboutMe p {
+			font-size: 16px;
+		}
+
+		#work h1 {
+			top: 30%;
+			font-size: 50px;
+		}
+
+		#work .social {
+			width: 200px;
+			margin: 75px auto 0px auto;
+		}
+
+		#work .social a {
+			width: 58px;
+			height: 58px;
+			font-size: 36px;
+			padding-left: 12px;
+			padding-top: 8px;
+		}
+
+		#about .fa-facebook {
+			margin-left: 0px;
+		}
+
+		.onMobileBrand {
+			padding: 15px 0px 0px 0px !important;
+		}
+
+		.logorow {
+			height: 250px;
+			margin-top:10%;
+			position: relative;
+		}
+
+		.logorow {
+			height: 300px;
+			margin-top:10%;
+			position: relative;
+		}
+
+		.logorow .logo {
+			background-image: url(../img/spotter.png);
+			width: 300px;
+			height: 300px;
+			background-size: 300px 300px;
+			border-radius: 40px;
+			display: inline-block;
+			margin-left: 10%;
+			overflow: hidden;
+			position: relative;
+			-webkit-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+			-moz-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+			box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+		}
+
+		.logorow .logo2 {
+			background: url(../img/factsoftoday.svg) white;
+			background-repeat: no-repeat;
+			background-size: 250px 250px;
+			background-position: center;
+			width: 300px;
+			height: 300px;
+			border-radius: 40px;
+			display: inline-block;
+			margin-right: 10%;
+			/*overflow: hidden;*/
+			position: relative;
+			-webkit-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+			-moz-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+			box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+		}
+
+		.logorow .logo3 {
+			background: url(../img/medxport.jpg) white;
+			background-repeat: no-repeat;
+			background-size: 300px 88px;
+			background-position: center;
+			width: 300px;
+			height: 300px;
+			border-radius: 40px;
+			display: inline-block;
+			margin-left: 10%;
+			overflow: hidden;
+			position: relative;
+			-webkit-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+			-moz-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+			box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+		}
+
+		.logorow .logo4 {
+			background-image: url(../img/mychef.png);
+			width: 300px;
+			height: 300px;
+			background-size: cover;
+			border-radius: 40px;
+			display: inline-block;
+			margin-right: 10%;
+			overflow: hidden;
+			position: relative;
+			-webkit-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+			-moz-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+			box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+		}
+
+		.aboutMeSectionFirst {
+			padding: 25px 25px 0px 25px;
+		}
+
+		.aboutMeSection {
+			padding: 25px 25px 0px 25px;
+		}
+
+		.aboutMeSectionAlt {
+			padding: 25px 25px 0px 25px;
+		}
+
+		.aboutMe h2{
+			margin: 0px 2px 0px 2px;
+		}
+
+		.aboutMe p{
+			margin-bottom: 0px;
+			padding-bottom: 25px;
+		}
+
+		.aboutMe .frame {
+			text-align: center;
+		}
+
+		#work .cancel {
+		position: absolute;
+		display: inline-block;
+		margin-top: 15px;
+		margin-left:5px;
+	}
+
+	#work .cancel img{
+		width: 16px;
+		height: 16px;
+	}
+
+	#work h1.projecttitle {
+		font-size: 50px;
+		margin-top:30px;
+	}
+
+	#work .screenshot {
+		width: 100%;
+		height: 100%;
+		margin-top: 25px;
+		display: block;
+		margin: 25px auto 0px auto;
+	}
+
+	#work .pill {
+		margin-top: 10px;
+		/*padding: 15px 40px;*/
+		border-radius: 500px;
+		border: 1px solid black;
+		overflow: hidden;
+		margin-left: 98px;
+		margin-bottom: 15px;
+	}
+
+	#work .pill a {
+		display: block;
+		width: 200px;
+		height: 37.5px;
+		line-height: 37.5px;
+		text-align: center;
+		color: black;
+		font-size: 16px;
+	}
+
+	#work h3 {
+		font-size: 20px;
+		display: inline-block;
+		line-height: 25px;
+		margin-top: 15px;
+		margin-bottom: 0px;
+	}
+
+	#work .container-fluid .pull-right {
+		float: left !important;
+	}
+	}
+
+	@media only screen and (max-width: 375px) {
+
+		.name {
+			font-size: 40px;
+		}
+
+		.infoWrapper {
+			width: 275px;
+		}
+
+		.typerInfo {
+			font-size: 14px;
+		}
+
+		#home .social a {
+			width: 44px;
+			height: 44px;
+			font-size: 20px;
+			padding-top: 5px;
+		}
+
+		#about .social a {
+			width: 58px;
+			height: 58px;
+			font-size: 36px;
+			padding-left: 12px;
+			padding-top: 8px;
+		}
+
+		#about .social {
+			width: 200px;
+			margin: 75px auto 0px auto;
+		}
+
+		#about h1 {
+			text-align: center;
+			font-size: 50px;
+			font-family: Open Sans;
+			margin: 0px;
+		}
+
+		.aboutMe {
+
+			
+		}
+
+		.aboutMe p {
+			font-size: 16px;
+		}
+
+		#work h1 {
+			top: 30%;
+			font-size: 50px;
+		}
+
+		#work .social {
+			width: 200px;
+			margin: 75px auto 0px auto;
+		}
+
+		#work .social a {
+			width: 58px;
+			height: 58px;
+			font-size: 36px;
+			padding-left: 12px;
+			padding-top: 8px;
+		}
+
+		#about .fa-facebook {
+			margin-left: 0px;
+		}
+
+		.onMobileBrand {
+			padding: 15px 0px 0px 0px !important;
+		}
+
+		.logorow {
+			height: 250px;
+			margin-top:10%;
+			position: relative;
+		}
+
+		.logorow .logo {
+			background-image: url(../img/spotter.png);
+			background-size: 275px 275px;
+			width: 275px;
+			height: 275px;
+			border-radius: 40px;
+			display: inline-block;
+			margin-left: 10%;
+			margin-bottom: 10%;
+			overflow: hidden;
+			position: relative;
+			-webkit-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+			-moz-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+			box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+		}
+
+		.logorow .logo2 {
+			background: url(../img/factsoftoday.svg) white;
+			background-repeat: no-repeat;
+			background-size: 225px 225px;
+			background-position: center;
+			width: 275px;
+			height: 275px;
+			border-radius: 40px;
+			display: inline-block;
+			margin-bottom: 10%;
+			margin-right: 10%;
+			overflow: hidden;
+			position: relative;
+			-webkit-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+			-moz-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+			box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+		}
+
+		.logorow .logo3 {
+			background: url(../img/medxport.jpg) white;
+			background-repeat: no-repeat;
+			background-size: 275px 81px;
+			background-position: center;
+			width: 275px;
+			height: 275px;
+			border-radius: 40px;
+			display: inline-block;
+			margin-left: 10%;
+			margin-bottom: 10%;
+			overflow: hidden;
+			position: relative;
+			-webkit-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+			-moz-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+			box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+		}
+
+		.logorow .logo4 {
+			background-image: url(../img/mychef.png);
+			background-size: 275px 275px;
+			width: 275px;
+			height: 275px;
+			border-radius: 40px;
+			display: inline-block;
+			margin-bottom: 10%;
+			margin-right: 10%;
+			overflow: hidden;
+			position: relative;
+			-webkit-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+			-moz-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+			box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+		}
+
+		.aboutMeSectionFirst {
+			padding: 25px 25px 0px 25px;
+		}
+
+		.aboutMeSection {
+			padding: 25px 25px 0px 25px;
+		}
+
+		.aboutMeSectionAlt {
+			padding: 25px 25px 0px 25px;
+		}
+
+		.aboutMe h2{
+			margin: 0px 2px 0px 2px;
+		}
+
+		.aboutMe p{
+			margin-bottom: 0px;
+			padding-bottom: 25px;
+		}
+
+		.aboutMe .frame {
+			text-align: center;
+		}
+	}
+
+	@media only screen and (max-width: 360px) {
+		.name {
+			font-size: 40px;
+		}
+
+		.infoWrapper {
+			width: 275px;
+		}
+
+		.typerInfo {
+			font-size: 14px;
+		}
+
+		#home .social a {
+			width: 44px;
+			height: 44px;
+			font-size: 20px;
+			padding-top: 5px;
+		}
+
+		#about .social a {
+			width: 58px;
+			height: 58px;
+			font-size: 36px;
+			padding-left: 12px;
+			padding-top: 8px;
+		}
+
+		#about .social {
+			width: 200px;
+			margin: 75px auto 0px auto;
+		}
+
+		#about h1 {
+			text-align: center;
+			font-size: 50px;
+			font-family: Open Sans;
+			margin: 0px;
+		}
+
+		.aboutMe {
+
+		}
+
+		.aboutMe p {
+			font-size: 16px;
+		}
+
+		#work h1 {
+			top: 30%;
+			font-size: 50px;
+		}
+
+		#work .social {
+			width: 200px;
+			margin: 75px auto 0px auto;
+		}
+
+		#work .social a {
+			width: 58px;
+			height: 58px;
+			font-size: 36px;
+			padding-left: 12px;
+			padding-top: 8px;
+		}
+
+		#about .fa-facebook {
+			margin-left: 0px;
+		}
+
+		.onMobileBrand {
+			padding: 15px 0px 0px 0px !important;
+		}
+
+		.logorow {
+			height: 250px;
+			margin-top:10%;
+			position: relative;
+		}
+
+		.logorow .logo {
+			background-image: url(../img/spotter.png);
+			background-size: 275px 275px;
+			width: 275px;
+			height: 275px;
+			border-radius: 40px;
+			display: inline-block;
+			margin-left: 7%;
+			margin-bottom: 10%;
+			overflow: hidden;
+			position: relative;
+			-webkit-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+			-moz-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+			box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+		}
+
+		.logorow .logo2 {
+			background: url(../img/factsoftoday.svg) white;
+			background-repeat: no-repeat;
+			background-size: 225px 225px;
+			background-position: center;
+			width: 275px;
+			height: 275px;
+			border-radius: 40px;
+			display: inline-block;
+			margin-bottom: 10%;
+			margin-right: 9%;
+			overflow: hidden;
+			position: relative;
+			-webkit-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+			-moz-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+			box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+		}
+
+		.logorow .logo3 {
+			background: url(../img/medxport.jpg) white;
+			background-repeat: no-repeat;
+			background-size: 275px 81px;
+			background-position: center;
+			width: 275px;
+			height: 275px;
+			border-radius: 40px;
+			display: inline-block;
+			margin-left: 7%;
+			margin-bottom: 10%;
+			overflow: hidden;
+			position: relative;
+			-webkit-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+			-moz-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+			box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+		}
+
+		.logorow .logo4 {
+			background-image: url(../img/mychef.png);
+			background-size: 275px 275px;
+			width: 275px;
+			height: 275px;
+			border-radius: 40px;
+			display: inline-block;
+			margin-bottom: 10%;
+			margin-right: 9%;
+			overflow: hidden;
+			position: relative;
+			-webkit-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+			-moz-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+			box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+		}
+
+		.aboutMeSectionFirst {
+			padding: 25px 25px 0px 25px;
+		}
+
+		.aboutMeSection {
+			padding: 25px 25px 0px 25px;
+		}
+
+		.aboutMeSectionAlt {
+			padding: 25px 25px 0px 25px;
+		}
+
+		.aboutMe h2{
+			margin: 0px 2px 0px 2px;
+		}
+
+		.aboutMe p{
+			margin-bottom: 0px;
+			padding-bottom: 25px;
+		}
+
+		.aboutMe .frame {
+			text-align: center;
+		}
+
+	}
+
+
+	@media only screen and (max-width: 320px) {
+		.name {
+			font-size: 40px;
+		}
+
+		.infoWrapper {
+			width: 275px;
+		}
+
+		.typerInfo {
+			font-size: 14px;
+		}
+
+		#home .social a {
+			width: 44px;
+			height: 44px;
+			font-size: 20px;
+			padding-top: 5px;
+		}
+
+		#about .social a {
+			width: 58px;
+			height: 58px;
+			font-size: 36px;
+			padding-left: 12px;
+			padding-top: 8px;
+		}
+
+		#about .social {
+			width: 200px;
+			margin: 75px auto 0px auto;
+		}
+
+		#about h1 {
+			text-align: center;
+			font-size: 50px;
+			font-family: Open Sans;
+			margin: 0px;
+		}
+
+		.aboutMe {
+
+			
+		}
+
+		.aboutMe p {
+			font-size: 16px;
+		}
+
+		#work h1 {
+			top: 30%;
+			font-size: 50px;
+		}
+
+		#work .social {
+			width: 200px;
+			margin: 75px auto 0px auto;
+		}
+
+		#work .social a {
+			width: 58px;
+			height: 58px;
+			font-size: 36px;
+			padding-left: 12px;
+			padding-top: 8px;
+		}
+
+		#about .fa-facebook {
+			margin-left: 0px;
+		}
+
+		.onMobileBrand {
+			padding: 15px 0px 0px 0px !important;
+		}
+
+		.logorow {
+			height: 250px;
+			margin-top:10%;
+			position: relative;
+		}
+
+		.logorow .logo {
+			background-image: url(../img/spotter.png);
+			background-size: 250px 250px;
+			width: 250px;
+			height: 250px;
+			border-radius: 40px;
+			display: inline-block;
+			margin-left: 7%;
+			margin-bottom: 10%;
+			overflow: hidden;
+			position: relative;
+			-webkit-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+			-moz-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+			box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+		}
+
+		.logorow .logo2 {
+			background: url(../img/factsoftoday.svg) white;
+			background-repeat: no-repeat;
+			background-size: 200px 200px;
+			background-position: center;
+			width: 250px;
+			height: 250px;
+			border-radius: 40px;
+			display: inline-block;
+			margin-bottom: 10%;
+			margin-right: 7%;
+			overflow: hidden;
+			position: relative;
+			-webkit-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+			-moz-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+			box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+		}
+
+		.logorow .logo3 {
+			background: url(../img/medxport.jpg) white;
+			background-repeat: no-repeat;
+			background-size: 250px 73px;
+			background-position: center;
+			width: 250px;
+			height: 250px;
+			border-radius: 40px;
+			display: inline-block;
+			margin-left: 7%;
+			margin-bottom: 10%;
+			overflow: hidden;
+			position: relative;
+			-webkit-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+			-moz-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+			box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+		}
+
+		.logorow .logo4 {
+			background-image: url(../img/mychef.png);
+			background-size: 250px 250px;
+			width: 250px;
+			height: 250px;
+			border-radius: 40px;
+			display: inline-block;
+			margin-bottom: 10%;
+			margin-right: 7%;
+			overflow: hidden;
+			position: relative;
+			-webkit-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+			-moz-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+			box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+		}
+
+		.aboutMeSectionFirst {
+			padding: 25px 15px 0px 15px;
+		}
+
+		.aboutMeSection {
+			padding: 25px 15px 0px 15px;
+		}
+
+		.aboutMeSectionAlt {
+			padding: 25px 15px 0px 15px;
+		}
+
+		.aboutMe h2{
+			margin: 0px 2px 0px 2px;
+		}
+
+		.aboutMe p{
+			margin-bottom: 0px;
+			padding-bottom: 25px;
+		}
+
+		.aboutMe .frame {
+			text-align: center;
+		}
+
+	#work .pill {
+		margin-left: 50px;
+	}
+	}
