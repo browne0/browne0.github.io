@@ -175,6 +175,6 @@ $(document).ready(function() {
 	$('.animated').waypoint(function() {
 	$(this).toggleClass($(this).data('animated'));
 	$(this).css('opacity', 1)
-},{ offset: 0, triggerOnce: true });
+},{ offset: '100%', triggerOnce: true });
 
 });
