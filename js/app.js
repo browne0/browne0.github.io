@@ -171,7 +171,7 @@ $(document).ready(function() {
 	// console.log($('#about .rightcont').height())
  
   // hide our element on page load
-	// $('.funfacts').css('opacity', 0)
+	$('.funfact').css('opacity', 0)
 	$('.animated').waypoint(function() {
 	$(this).toggleClass($(this).data('animated'));
 	$(this).css('opacity', 1)
