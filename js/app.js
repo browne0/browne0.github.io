@@ -5,27 +5,27 @@ app.config(['$routeProvider', '$locationProvider',
 	$routeProvider
 
 	.when('/', {
-		templateUrl: '/pages/workMain.html',
+		templateUrl: 'pages/workMain.html',
 		controller: 'WorkMainController'
 	})
 
 	.when('/projects/spotter', {
-		templateUrl: '/pages/spotter.html',
+		templateUrl: 'pages/spotter.html',
 		controller: 'SpotterController'
 	})
 
 	.when('/projects/factsoftoday', {
-		templateUrl: '/pages/factsoftoday.html',
+		templateUrl: 'pages/factsoftoday.html',
 		controller: 'FactsOfTodayController'
 	})
 
 	.when('/projects/medxport', {
-		templateUrl: '/pages/medxport.html',
+		templateUrl: 'pages/medxport.html',
 		controller: 'MedxportController'
 	})
 
 	.when('/projects/mychef', {
-		templateUrl: '/pages/mychef.html',
+		templateUrl: 'pages/mychef.html',
 		controller: 'MyChefController'
 	})
 
@@ -144,17 +144,17 @@ $(document).ready(function() {
 			// 	works.removeClass("stick");
 			// 	works.addClass("sticky-fix");
 			// }
-			if (windowpos >= aboutpos.top) {
+			if (windowpos >= aboutpos.top + $('#work').height()) {
 				abouts.addClass("stick");
 				abouts.removeClass("sticky-fix");
 			} else {
 				abouts.removeClass("stick");
 			}
 
-			if ($(window).scrollBottom() <= $('#work').height()) {
-				abouts.removeClass("stick");
-				abouts.addClass("sticky-fix");
-			}
+			// if ($(window).scrollBottom() <= $('#work').height()) {
+			// 	abouts.removeClass("stick");
+			// 	abouts.addClass("sticky-fix");
+			// }
 
 			if ($(document).scrollTop() > 50) {
 				$('nav').addClass('shrink');

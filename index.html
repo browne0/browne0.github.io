@@ -9,7 +9,7 @@
 	<meta name="description" content="I am a Web & iOS Developer from New York.">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/typer.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.0/animate.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.2.2/flexslider-min.css" />
@@ -31,7 +31,7 @@
 	<meta name="msapplication-TileColor" content="#ffffff">
 	<meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
-	<base href="/">
+	<base href="/browne0.github.io/">
 </head>
 <body>
 	<nav class="navbar navbar-default navbar-fixed-top">
@@ -47,8 +47,8 @@
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#about" class="link">ABOUT</a></li>
 					<li><a href="#work" class="link">WORK</a></li>
+					<li><a href="#about" class="link">ABOUT</a></li>
 					<!-- <li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
 						<ul class="dropdown-menu">
@@ -86,8 +86,11 @@
 		</div>
 		<!-- <div class="arrow_box"></div> -->
 	</section>
+	<section id="work" class="page">
+		<div ng-view class="{{ pageClass }}"></div>
+	</section>
 	<section id="about"  class="page">
-		<div class="col-lg-6 col-xs-12 leftcont" id="sticker">
+		<div class="col-lg-4 col-xs-12 leftcont" id="sticker">
 			<div class="aboutwrap">
 				<h1>About Me</h1>
 				<div class="social">
@@ -99,7 +102,7 @@
 			
 			<img src="img/selfie.png" alt="Malik Browne" class="selfie hidden-xs hidden-sm hidden-md">
 		</div>
-		<div class="col-lg-6 col-xs-12 rightcont pull-right">
+		<div class="col-lg-8 col-xs-12 rightcont pull-right">
 			
 			<div class="aboutMe">
 
@@ -124,7 +127,9 @@
 							<img src="img/jamaica.png" class="img"><h2><b>Fun Fact #2</b></h2><img src="img/england.png" class="img">
 						</div>
 
-						<p>One thing that always interests people is that <b>I'm half Jamaican, and half British.</b> My mom is a native of Jamaica, and even though I was born in the U.S., I have a strong connection to Jamaica's culture thanks to her. To make things even more eclectic, my dad was born and raised in England until he turned 18 and moved to the U.S. with his dad!</p>
+						<p>One thing that always interests people is that <b>I'm half Jamaican, and half British.</b> My mom is a native of Jamaica, and even though I was born in the U.S., I have a strong connection to Jamaica's culture thanks to her.</p>
+
+						<p>To make things even more eclectic, my dad was born and raised in England until he turned 12 and moved to the U.S. with his dad!</p>
 					</div>
 					
 				</div>
@@ -148,7 +153,13 @@
 							<img src="img/game-controller.png" width="48" height="48" class="img"><h2><b>Fun Fact #4</b></h2><img src="img/headset.png" width="48" height="48" class="img">
 						</div>
 
-						<p>Along with playing music, I enjoy <b>casual gaming</b> with awesome friends I've made over the years. I'd say that my favorite games right now are League of Legends, Starcraft 2, and World of Warcraft: Legion. It's an awesome hobby that I enjoy, and gives me an easy way of keeping in touch with people!</p>
+						<p>Along with playing music, I enjoy <b>casual gaming</b> with awesome friends I've made over the years. I'd say that my favorite games right now are: </p>
+							<ul>
+								<li>League of Legends</li>
+								<li>Starcraft 2</li>
+								<li>World of Warcraft: Legion</li>
+							</ul>
+						<p>It's an awesome hobby that I enjoy, and gives me an easy way of keeping in touch with people!</p>
 					</div>
 					
 
@@ -157,20 +168,18 @@
 
 		</div>
 	</section>
-	<section id="work" class="page">
-		<div ng-view class="{{ pageClass }}"></div>
-	</section>
 </div>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-animate.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js"></script>
-<script src="/js/skrollr.min.js"></script>
-<script src='/js/typer.js'></script>
-<script src='/js/app.js'></script>
+<script src="js/skrollr.min.js"></script>
+<script src='js/typer.js'></script>
+<script src='js/app.js'></script>
+<script src='js/angular-css.min.js'></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.2.2/jquery.flexslider-min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src='/js/waypoints.min.js'></script>	
+<script src='js/waypoints.min.js'></script>	
 <!-- Icon made by Madebyoliver from www.flaticon.com  -->
 <!-- Icon made by Freepik from www.flaticon.com  -->
 </body>
