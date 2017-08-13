@@ -1,0 +1,100 @@
+#talentCalculator {
+	background: url(../curse-fe-challenge/assets/talent-calc-bg.png);
+	border: 1px solid rgba(30,31,32, .75);
+	padding: 17.5px;
+	.calcHeader {
+		width: 965px;
+		height: 43px;
+		background: rgba(19,20,20, .75);
+		margin: auto;
+		p {
+			text-align: center;
+			font-size: 25px;
+			color: #fff;
+			@include vertical-align();
+		}
+	}
+
+	.calcContent {
+		display: flex;
+		padding-bottom: 40px;
+		align-items: center;
+		justify-content: space-between;
+		.paths {
+			.talentPath {
+				display:flex;
+				padding: 25px 0px;
+				align-items: center;
+				.title {
+					color: #fff;
+					font-weight: 600;
+					font-size: 13px;
+					margin-right: 15px;
+				}
+				.talent {
+					width: 52px;
+					height: 52px;
+					border: 5px solid #4c4c4c;
+					background-image: url(../curse-fe-challenge/assets/talent-icons-sprite.png);
+
+					// TALENT PATH 1
+					&.pathOneStepOne {
+						background-position: 0px 50px
+					}
+					&.pathOneStepTwo {
+						background-position: 350px 50px
+					}
+					&.pathOneStepThree {
+						background-position: 300px 50px
+					}
+					&.pathOneStepFour {
+						background-position: 250px 50px
+					}
+
+					// TALENT PATH 2
+					&.pathTwoStepOne {
+						background-position: 200px 50px
+					}
+					&.pathTwoStepTwo {
+						background-position: 150px 50px
+					}
+					&.pathTwoStepThree {
+						background-position: 100px 50px
+					}
+					&.pathTwoStepFour {
+						background-position: 50px 50px
+					}
+				}
+				.connector {
+					background-color: rgba(30,31,32, .75);
+					height: 20px;
+					width: 104px;
+					border-style: solid;
+					border-color: rgba(76,76,76, .3);
+					border-width: 1px 1px 1px 0px;
+				}
+			}
+		}
+		.points {
+			width: 176px;
+			height: 90px;
+			margin-right: 45px;
+			border: 1px solid rgba(30,31,32, .75);
+			display: flex;
+			align-items: center;
+			flex-flow: row wrap;
+			p {
+				color: #fff;
+				font-size: 23px;
+				text-align: center;
+				flex: 1 100%;
+				span {
+					color: #6c98c7;
+				}
+				&:last-child {
+					margin-top: -30px;
+				}
+			}
+		}
+	}
+}

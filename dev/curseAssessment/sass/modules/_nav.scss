@@ -1,0 +1,113 @@
+nav {
+	width: 100%;
+	height: 60px;
+	background-color: #131414;
+	border-bottom: 5px solid #2d3a48;
+	color: #fff;
+	ul {
+		list-style: none;
+		width: 100%;
+		height: 100%;
+	}
+	li {
+		float: left;
+		position: relative;
+		min-width: 125px;
+		text-align: center;
+		height: 100%;
+		border-right: 1px solid rgba(0, 0, 0, .25);
+
+		&:hover a {
+			background: #1b1d1e;
+		}
+
+		a {
+			height: 100%;
+			p {
+				background-repeat: no-repeat;
+				&.snowflake {
+					display: inline-block;
+					margin-top: 10px;
+					width: 23px;
+					height: 23px;
+					background-image: url(../curse-fe-challenge/assets/nav-icons-sprite.png);
+				}
+				&.magnet {
+					display: inline-block;
+					margin-top: 10px;
+					width: 23px;
+					height: 23px;
+					background-image: url(../curse-fe-challenge/assets/nav-icons-sprite.png);
+					background-position: -23px 0px;
+				}
+				&.liquid {
+					display: inline-block;
+					margin-top: 10px;
+					width: 23px;
+					height: 23px;
+					background-image: url(../curse-fe-challenge/assets/nav-icons-sprite.png);
+					background-position: -46px 0px;
+				}
+			}
+		}
+
+		ul {
+			float: left;
+			left: 0;
+			opacity: 0;
+			position: absolute;
+			top:60px;
+			visibility: hidden;
+			z-index: 1;
+			@include transition();
+			li {
+				float: none;
+				width: 100%;
+				border-bottom: 1px solid rgba(47, 47, 47, .2);
+				height: auto;
+				a {
+					height: auto;
+					padding: 7.5px 0px;
+					display: flex;
+					-webkit-align-items: center;
+					justify-content: center;
+				}
+			}
+
+			a {
+				background: #2f2f2f !important;
+				&:hover {
+					background: #3d3d3d !important;
+				}
+			}
+		}
+
+		&:hover ul {
+			opacity: 1;
+			top: 60px;
+			visibility: visible;
+		}
+	}
+	a {
+		display: block;
+		font-size: 14px;
+		color: #fff;
+		text-decoration: none;
+		@include transition();
+
+		&.dropdown:after {
+			content:'\25bc';
+			color: #6D6D6D;
+			position: absolute;
+			bottom: 5px;
+			right: 5px;
+		}
+	}
+	.clearfix:after, .clearfix:before {
+		content:"";
+		display:table;
+	}
+	.clearfix:after {
+		clear:both;
+	}
+}

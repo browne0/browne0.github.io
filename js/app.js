@@ -2,39 +2,82 @@ var app = angular.module('myApp', ['ngRoute', 'ngAnimate']);
 
 app.config(['$routeProvider', '$locationProvider',
 	function($routeProvider, $locationProvider) {
-	$routeProvider
+		$routeProvider
 
-	.when('/', {
-		templateUrl: 'pages/workMain.html',
-		controller: 'WorkMainController'
-	})
+		.when('/', {
+			templateUrl: './pages/workMain.html',
+			controller: 'WorkMainController'
+		})
 
-	.when('/projects/spotter', {
-		templateUrl: 'pages/spotter.html',
-		controller: 'SpotterController'
-	})
+		.when('/projects/spotter', {
+			templateUrl: './pages/spotter.html',
+			controller: 'SpotterController'
+		})
 
-	.when('/projects/factsoftoday', {
-		templateUrl: 'pages/factsoftoday.html',
-		controller: 'FactsOfTodayController'
-	})
+		.when('/projects/factsoftoday', {
+			templateUrl: './pages/factsoftoday.html',
+			controller: 'FactsOfTodayController'
+		})
 
-	.when('/projects/medxport', {
-		templateUrl: 'pages/medxport.html',
-		controller: 'MedxportController'
-	})
+		.when('/projects/medxport', {
+			templateUrl: './pages/medxport.html',
+			controller: 'MedxportController'
+		})
 
-	.when('/projects/mychef', {
-		templateUrl: 'pages/mychef.html',
-		controller: 'MyChefController'
-	})
+		.when('/projects/mychef', {
+			templateUrl: './pages/mychef.html',
+			controller: 'MyChefController'
+		})
 
-	.otherwise({redirectTo: '/'});
+		.when('/projects/beesdesign', {
+			templateUrl: './pages/beesdesign.html',
+			controller: 'BeesDesignController'
+		})
 
-	$locationProvider.html5Mode({
-        enabled: true,
-    });
-}]);
+		.when('/projects/shoppingcart', {
+			templateUrl: './pages/shoppingCart.html',
+			controller: 'ShoppingCartController'
+		})
+
+		.otherwise({redirectTo: '/'});
+
+		$locationProvider.html5Mode({
+			enabled: true,
+		});
+	}]);
+
+app.controller('HomeController', function($scope) {
+	$scope.$on('$routeChangeSuccess', function(){
+		if ($(window).width() > 800) {
+			// Check to see whether it should stick on page load
+			var abouts = $("#about #sticker");
+			var aboutpos = abouts.offset();
+			var nav = $(".navbar").height();
+			$(window).scroll(function() {
+				var windowpos = $(window).scrollTop();
+				// console.log("Scroll position: " + windowpos);
+				// console.log("Distance to bottom " + $(window).scrollBottom());
+
+				if (windowpos >= aboutpos.top + $('#work').height()) {
+					abouts.addClass("stick");
+					abouts.removeClass("sticky-fix");
+				} else {
+					abouts.removeClass("stick");
+				}
+
+				if ($(document).scrollTop() > 50) {
+					$('nav').addClass('shrink');
+					$('.navbar li a').addClass('shrink');
+					$('.navbar-brand').addClass('shrink');
+				} else {
+					$('nav').removeClass('shrink');
+					$('.navbar li a').removeClass('shrink');
+					$('.navbar-brand').removeClass('shrink');
+				}
+			});
+		}
+	});
+});
 
 app.controller('WorkMainController', function($scope) {
 	$scope.pageClass = 'work-home';
@@ -56,25 +99,33 @@ app.controller('MyChefController', function($scope) {
 	$scope.pageClass = 'work-mychef';
 });
 
+app.controller('BeesDesignController', function($scope) {
+	$scope.pageClass = 'work-beesdesign';
+});
+
+app.controller('ShoppingCartController', function($scope) {
+	$scope.pageClass = 'work-shoppingcart';
+});
+
 app.directive('flexslider', function () {
-  
-  return {
-    link: function (scope, element, attrs) {
-      
-      element.flexslider({
-        animation: "slide",
-        startAt: 0,
-        controlNav: false,
-        slideshow: false
-      });
-    }
-  }
+
+	return {
+		link: function (scope, element, attrs) {
+
+			element.flexslider({
+				animation: "slide",
+				startAt: 0,
+				controlNav: false,
+				slideshow: false
+			});
+		}
+	}
 });
 
 
 
-$.fn.scrollBottom = function() { 
-	return $(document).height() - this.scrollTop() - this.height(); 
+$.fn.scrollBottom = function() {
+	return $(document).height() - this.scrollTop() - this.height();
 };
 
 typer('.typertext', 30)
@@ -82,14 +133,6 @@ typer('.typertext', 30)
 .line(' ')
 .pause(500)
 .continue("Web Developer, iOS Developer, Web Designer, Photographer. The story continues!");
-
-// Hotfix: Realign navbar logo when button is pressed
-$(".navbar-toggle").on("click", function(){
-	if ($('.navbar-toggle').attr('aria-expanded') === "false") {
-		$(".navbar-toggle ~ a").toggleClass("onMobileBrand");
-		$(".navbar-toggle").toggleClass("onMobileButton");
-	}
-});
 
 // Feature: Smooth Scrolling on navbar link clicks
 
@@ -115,66 +158,30 @@ $(document).ready(function() {
 
 	if ($(window).width() > 800) {
 		( function( $ ) {
-    // Init Skrollr
-    var s = skrollr.init({
-    	forceHeight: false,
-    	mobileCheck: function() {
-    		return false;
-    	}
-    });
-} )( jQuery );
-
-		var abouts = $("#about #sticker");
-		var works = $('#work #sticker2');
-		var nav = $(".navbar").height();
-		var aboutpos = abouts.offset(); 
-		var workpos = works.offset();                   
-		$(window).scroll(function() {
-			var windowpos = $(window).scrollTop();
-			// console.log("Scroll position: " + windowpos);
-			// console.log("Distance to bottom " + $(window).scrollBottom());
-			// if (windowpos > workpos.top - nav) {
-			// 	works.addClass("stick");
-			// 	works.removeClass("sticky-fix");
-			// } else {
-			// 	works.removeClass("stick");
-			// }
-
-			// if ($(window).scrollBottom() <= $('.contact').height()) {
-			// 	works.removeClass("stick");
-			// 	works.addClass("sticky-fix");
-			// }
-			if (windowpos >= aboutpos.top + $('#work').height()) {
-				abouts.addClass("stick");
-				abouts.removeClass("sticky-fix");
-			} else {
-				abouts.removeClass("stick");
-			}
-
-			// if ($(window).scrollBottom() <= $('#work').height()) {
-			// 	abouts.removeClass("stick");
-			// 	abouts.addClass("sticky-fix");
-			// }
-
-			if ($(document).scrollTop() > 50) {
-				$('nav').addClass('shrink');
-				$('.navbar li a').addClass('shrink');
-				$('.navbar-brand').addClass('shrink');
-				} else {
-				$('nav').removeClass('shrink');
-				$('.navbar li a').removeClass('shrink');
-				$('.navbar-brand').removeClass('shrink');
-			}
-		});
+	    // Init Skrollr
+			    var s = skrollr.init({
+			    	forceHeight: false,
+			    	mobileCheck: function() {
+			    		return false;
+			    	}
+			    });
+		} )( jQuery );
 	}
 
 	// console.log($('#about .rightcont').height())
- 
+
   // hide our element on page load
 	$('.funfact').css('opacity', 0)
 	$('.animated').waypoint(function() {
-	$(this).toggleClass($(this).data('animated'));
-	$(this).css('opacity', 1)
-},{ offset: '100%', triggerOnce: true });
+  	$(this).toggleClass($(this).data('animated'));
+  	$(this).css('opacity', 1)
+  },{ offset: '100%', triggerOnce: true });
+
+  $("body").click(function(event) {
+        // only do this if navigation is visible, otherwise you see jump in navigation while collapse() is called
+        if ($(".navbar-collapse").is(":visible") && $(".navbar-toggle").is(":visible") ) {
+        	$('.navbar-collapse').collapse('toggle');
+        }
+    });
 
 });

@@ -1,0 +1,68 @@
+footer {
+	width: calc(100% - 2px);
+	background: #131414;
+	height: 80px;
+	border: 1px solid rgba(30,31,32, .75);
+	border-bottom: 0px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	.bottomNav {
+		display: flex;
+		flex-direction: column;
+		.links {
+			overflow: hidden;
+			a {
+				border-right: 1px solid rgba(255,255,255,.4);
+				color: #fff;
+				text-decoration: none;
+				padding: 0px 10px;
+				@include transition();
+				&:first-child {
+					padding-left: 15px;
+				}
+				&:last-child {
+					border-right: 0px;
+				}
+				&:hover {
+					@include transition();
+					color: #4c4c4c;
+				}
+			}
+		}
+		p {
+			color: rgba(255,255,255,.4);
+			padding: 7.5px 0px 5px 15px;
+			font-size: 14px;
+		}
+
+	}
+	.social {
+		padding-right: 15px;
+		a {
+			display: inline-block;
+			background-color: #5e84ab;
+			width: 27px;
+			border-radius: 3px;
+			border: 0px;
+			height: 27px;
+			@include transition();
+			&:hover {
+				background-color: #2f4255;
+				@include transition();
+			}
+		}
+		.tw-logo {
+			background-image: url(../curse-fe-challenge/assets/social-icons-sprite.png);
+		}
+		.fb-logo {
+			background-image: url(../curse-fe-challenge/assets/social-icons-sprite.png);
+			background-position: 54px 0px;
+		}
+		.yt-logo {
+			background-image: url(../curse-fe-challenge/assets/social-icons-sprite.png);
+			background-position: 27px 0px;
+		}
+	}
+}

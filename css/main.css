@@ -69,7 +69,7 @@ a, a:focus, a:hover {
 .navbar li a {
 	color: black;
 	font-size: 25px;
-	padding: 32px 60px; /* Will need to change for responsive to 32px 15px */ 
+	padding: 32px 60px; /* Will need to change for responsive to 32px 15px */
 	font-weight: 300;
 	text-decoration: none;
 	background-color: rgb(255, 255, 255);
@@ -79,6 +79,10 @@ a, a:focus, a:hover {
 	font-size: 35px;
 	padding: 30px 0px;
 	color: rgba(9, 112, 84, .7);
+}
+
+.navbar-nav {
+	margin: 0px -15px !important;
 }
 
 .navbar .navbar-brand:hover {
@@ -132,7 +136,8 @@ nav.navbar .navbar-brand.shrink {
 	/* HOME CSS */
 
 	#home {
-		background: url(../img/pattern-3.png) rgba(255, 132, 13, 1);
+		/*background: url(../img/pattern-3.png) rgba(255, 132, 13, 1);*/
+		background: rgba(255, 132, 13, 1);
 		height: 100vh;
 		position: relative;
 		z-index: 2;
@@ -295,6 +300,7 @@ nav.navbar .navbar-brand.shrink {
 			display: inline-block;
 			vertical-align: middle;
 			text-align: center;
+			margin-bottom: 35px;
 		}
 
 		.aboutMe .img {
@@ -307,16 +313,16 @@ nav.navbar .navbar-brand.shrink {
 		}
 
 		.aboutMeSectionFirst {
-			padding: 85px 45px 85px 100px;
+			padding: 85px 160px 85px 225px;
 		}
 
 		.aboutMeSection {
-			padding: 85px 45px 85px 100px;
+			padding: 85px 160px 85px 225px;
 			background-color: rgba(9, 112, 84, .35);
 		}
 
 		.aboutMeSectionAlt {
-			padding: 85px 45px 85px 100px;
+			padding: 85px 160px 85px 225px;
 		}
 
 		#about {
@@ -345,9 +351,9 @@ nav.navbar .navbar-brand.shrink {
 		}
 
 		#work h1 {
-			margin-top: 85px;
+			margin-top: 95px;
 			font-size: 70px;
-			text-align: center;	
+			text-align: center;
 		}
 
 		.workwrap {
@@ -363,10 +369,15 @@ nav.navbar .navbar-brand.shrink {
 
 		#work .piece {
 			display: inline-block;
-			height: auto;
+			height: 285px;
 			margin: 25px 0px 0px 25px;
 			overflow: hidden;
 			background-color: white;
+			-webkit-transition: all 0.35s ease-in-out;
+			-moz-transition: all 0.35s ease-in-out;
+			-o-transition: all 0.35s ease-in-out;
+			-ms-transition: all 0.35s ease-in-out;
+			transition: all 0.35s ease-in-out;
 		}
 
 		#work .cancel {
@@ -470,11 +481,11 @@ nav.navbar .navbar-brand.shrink {
 			top: 0;
 			left: 0;
 			z-index:10000;
-			-webkit-transition: all 0.35s ease-in-out-out;
-			-moz-transition: all 0.35s ease-in-out-out;
-			-o-transition: all 0.35s ease-in-out-out;
-			-ms-transition: all 0.35s ease-in-out-out;
-			transition: all 0.35s ease-in-out-out;
+			-webkit-transition: all 0.35s ease-in-out;
+			-moz-transition: all 0.35s ease-in-out;
+			-o-transition: all 0.35s ease-in-out;
+			-ms-transition: all 0.35s ease-in-out;
+			transition: all 0.35s ease-in-out;
 		}
 
 		.sticky-fix {
@@ -490,29 +501,29 @@ nav.navbar .navbar-brand.shrink {
 			top: 0;
 			background-color: rgba(0, 0, 0, .5);
 			opacity: 0;
-			-webkit-transition: all 0.35s ease-in-out-out;
-			-moz-transition: all 0.35s ease-in-out-out;
-			-o-transition: all 0.35s ease-in-out-out;
-			-ms-transition: all 0.35s ease-in-out-out;
-			transition: all 0.35s ease-in-out-out;
+			-webkit-transition: all 0.35s ease-in-out;
+			-moz-transition: all 0.35s ease-in-out;
+			-o-transition: all 0.35s ease-in-out;
+			-ms-transition: all 0.35s ease-in-out;
+			transition: all 0.35s ease-in-out;
 		}
 
 		.piece:hover .mask-overlay {
 			opacity: .7;
-			-webkit-transition: all 0.35s ease-in-out-out;
-			-moz-transition: all 0.35s ease-in-out-out;
-			-o-transition: all 0.35s ease-in-out-out;
-			-ms-transition: all 0.35s ease-in-out-out;
-			transition: all 0.35s ease-in-out-out;
+			-webkit-transition: all 0.35s ease-in-out;
+			-moz-transition: all 0.35s ease-in-out;
+			-o-transition: all 0.35s ease-in-out;
+			-ms-transition: all 0.35s ease-in-out;
+			transition: all 0.35s ease-in-out;
 		}
 
 		.piece:hover .social-icons a i {
 			opacity: 0.7;
-			-webkit-transition: all 0.35s ease-in-out-out;
-			-moz-transition: all 0.35s ease-in-out-out;
-			-o-transition: all 0.35s ease-in-out-out;
-			-ms-transition: all 0.35s ease-in-out-out;
-			transition: all 0.35s ease-in-out-out;
+			-webkit-transition: all 0.35s ease-in-out;
+			-moz-transition: all 0.35s ease-in-out;
+			-o-transition: all 0.35s ease-in-out;
+			-ms-transition: all 0.35s ease-in-out;
+			transition: all 0.35s ease-in-out;
 		}
 
 		.social-icons {
@@ -555,29 +566,21 @@ nav.navbar .navbar-brand.shrink {
 
 		/* ANIMATIONS */
 
-		.work-home, .work-spotter, .work-factsoftoday, .work-mychef {
-			-o-transition: all .4s;
-			-moz-transition: all .4s;
-			-webkit-transition: all .4s;
-			-ms-transition: all .4s;
-			transition: all .4s;
-		}
-
 		.work-home {
 			overflow: hidden;
-			padding-bottom: 85px;
+			padding-bottom: 95px;
 		}
 
 		.work-spotter {
 			background-color: rgb(250, 250, 250);
 		}
 
-		.work-factsoftoday {
+		.work-factsoftoday, .work-beesdesign, .work-shoppingcart {
 			background-color: rgb(56, 56, 56);
 			color: white !important;
 		}
 
-		.work-factsoftoday .pill a {
+		.work-factsoftoday .pill a, .work-beesdesign .pill a, .work-shoppingcart .pill a {
 			color: rgb(250, 250, 250) !important;
 		}
 
@@ -585,7 +588,7 @@ nav.navbar .navbar-brand.shrink {
 			color: rgba(255, 132, 13, 1);;
 		}
 
-		.work-factsoftoday .pill {
+		.work-factsoftoday .pill, .work-beesdesign .pill, .work-shoppingcart .pill {
 			border-color: rgb(250, 250, 250) !important;
 		}
 
@@ -672,7 +675,7 @@ nav.navbar .navbar-brand.shrink {
 		@keyframes slideOutLeft {
 			to 		{ transform: translateX(-100%); }
 		}
-		@-moz-keyframes slideOutLeft {	
+		@-moz-keyframes slideOutLeft {
 			to 		{ -moz-transform: translateX(-100%); }
 		}
 		@-webkit-keyframes slideOutLeft {
@@ -724,67 +727,104 @@ nav.navbar .navbar-brand.shrink {
 
 		/* Main -------------------------- */
 		.work-home.ng-leave {
-			-webkit-animation:fadeOut 0.5s both ease-in-out;
-			-moz-animation:fadeOut 0.5s both ease-in-out;
-			animation:fadeOut 0.5s both ease-in-out;   
+			-webkit-animation:fadeOut 0.5s both ease-in;
+			-moz-animation:fadeOut 0.5s both ease-in;
+			animation:fadeOut 0.5s both ease-in;
 		}
 
 		.work-home.ng-enter {
-			-webkit-animation:fadeIn 0.5s both ease-in-out;
-			-moz-animation:fadeIn 0.5s both ease-in-out;
-			animation:fadeIn 0.5s both ease-in-out;  
+			-webkit-animation:fadeIn 0.5s both ease-in;
+			-moz-animation:fadeIn 0.5s both ease-in;
+			animation:fadeIn 0.5s both ease-in;
 		}
 
 		/* FactsOfToday -------------------------- */
 		.work-factsoftoday.ng-leave {
-			-webkit-animation:slideOutLeft 0.5s both ease-in-out;
-			-moz-animation:slideOutLeft 0.5s both ease-in-out;
-			animation:slideOutLeft 0.5s both ease-in-out;   
+			-webkit-animation:fadeOut 0.5s both ease-in;
+			-moz-animation:fadeOut 0.5s both ease-in;
+			animation:fadeOut 0.5s both ease-in;
 		}
-		.work-factsoftoday.ng-enter {  
-			-webkit-animation:slideInRight 0.5s both ease-in-out;
-			-moz-animation:slideInRight 0.5s both ease-in-out;
-			animation:slideInRight 0.5s both ease-in-out;    
+		.work-factsoftoday.ng-enter {
+			-webkit-animation:fadeIn 0.5s both ease-in;
+			-moz-animation:fadeIn 0.5s both ease-in;
+			animation:fadeIn 0.5s both ease-in;
 		}
 
 		/* myChef ------------------------ */
 		.work-mychef.ng-leave {
-			-webkit-animation:slideOutLeft 0.5s both ease-in-out;
-			-moz-animation:slideOutLeft 0.5s both ease-in-out;
-			animation:slideOutLeft 0.5s both ease-in-out;   
+			-webkit-animation:fadeOut 0.5s both ease-in;
+			-moz-animation:fadeOut 0.5s both ease-in;
+			animation:fadeOut 0.5s both ease-in;
 		}
-		.work-mychef.ng-enter {  
-			-webkit-animation:slideInRight 0.5s both ease-in-out;
-			-moz-animation:slideInRight 0.5s both ease-in-out;
-			animation:slideInRight 0.5s both ease-in-out;    
+		.work-mychef.ng-enter {
+			-webkit-animation:fadeIn 0.5s both ease-in;
+			-moz-animation:fadeIn 0.5s both ease-in;
+			animation:fadeIn 0.5s both ease-in;
 		}
 
 		/* Spotter ---------------------- */
 		.work-spotter.ng-leave {
-			-webkit-animation:slideOutLeft 0.5s both ease-in-out;
-			-moz-animation:slideOutLeft 0.5s both ease-in-out;
-			animation:slideOutLeft 0.5s both ease-in-out;   
+			-webkit-animation:fadeOut 0.5s both ease-in;
+			-moz-animation:fadeOut 0.5s both ease-in;
+			animation:fadeOut 0.5s both ease-in;
 		}
-		.work-spotter.ng-enter {  
-			-webkit-animation:slideInRight 0.5s both ease-in-out;
-			-moz-animation:slideInRight 0.5s both ease-in-out;
-			animation:slideInRight 0.5s both ease-in-out;    
+		.work-spotter.ng-enter {
+			-webkit-animation:fadeIn 0.5s both ease-in;
+			-moz-animation:fadeIn 0.5s both ease-in;
+			animation:fadeIn 0.5s both ease-in;
 		}
 
 		/* MedxPort ------------------------ */
 		.work-medxport.ng-leave {
-			-webkit-animation:slideOutLeft 0.5s both ease-in-out;
-			-moz-animation:slideOutLeft 0.5s both ease-in-out;
-			animation:slideOutLeft 0.5s both ease-in-out;   
+			-webkit-animation:fadeOut 0.5s both ease-in;
+			-moz-animation:fadeOut 0.5s both ease-in;
+			animation:fadeOut 0.5s both ease-in;
 		}
-		.work-medxport.ng-enter {  
-			-webkit-animation:slideInRight 0.5s both ease-in-out;
-			-moz-animation:slideInRight 0.5s both ease-in-out;
-			animation:slideInRight 0.5s both ease-in-out;    
+		.work-medxport.ng-enter {
+			-webkit-animation:fadeIn 0.5s both ease-in;
+			-moz-animation:fadeIn 0.5s both ease-in;
+			animation:fadeIn 0.5s both ease-in;
+		}
+
+		/* Bee's Design ------------------------ */
+		.work-beesdesign.ng-leave {
+			-webkit-animation:fadeOut 0.5s both ease-in;
+			-moz-animation:fadeOut 0.5s both ease-in;
+			animation:fadeOut 0.5s both ease-in;
+		}
+		.work-beesdesign.ng-enter {
+			-webkit-animation:fadeIn 0.5s both ease-in;
+			-moz-animation:fadeIn 0.5s both ease-in;
+			animation:fadeIn 0.5s both ease-in;
+		}
+
+		/* Shopping Cart ------------------------ */
+		.work-shoppingcart.ng-leave {
+			-webkit-animation:fadeOut 0.5s both ease-in;
+			-moz-animation:fadeOut 0.5s both ease-in;
+			animation:fadeOut 0.5s both ease-in;
+		}
+		.work-shoppingcart.ng-enter {
+			-webkit-animation:fadeIn 0.5s both ease-in;
+			-moz-animation:fadeIn 0.5s both ease-in;
+			animation:fadeIn 0.5s both ease-in;
 		}
 
 
 		@media only screen and (max-width: 1500px) {
+
+			.aboutMeSectionFirst {
+				padding: 85px 100px 85px 165px;
+			}
+
+			.aboutMeSection {
+				padding: 85px 100px 85px 165px;
+			}
+
+			.aboutMeSectionAlt {
+				padding: 85px 100px 85px 165px;
+			}
+
 			.name {
 				font-size: 40px;
 			}
@@ -834,7 +874,7 @@ nav.navbar .navbar-brand.shrink {
 				text-align: center;
 				font-size: 70px;
 				font-family: Open Sans;
-				margin: 0px;
+				margin-top: 95px;
 			}
 
 			#about .social {
@@ -897,16 +937,16 @@ nav.navbar .navbar-brand.shrink {
 				border-radius: 500px;
 				border: 1px solid black;
 				overflow: hidden;
-				
+
 				margin-bottom: 15px;
 			}
 
 			#work .pill a {
 				display: block;
-				width: 200px;
+				width: 190px;
 				height: 55px;
 				line-height: 50px;
-				font-size: 20px;
+				font-size: 15px;
 				text-align: center;
 				color: black;
 			}
@@ -1035,8 +1075,12 @@ nav.navbar .navbar-brand.shrink {
 			}
 
 			#work h1 {
-				margin-top: 30px;
+				margin-top: 95px;
 				font-size: 70px;
+			}
+
+			#work .piece {
+				height: auto;
 			}
 		}
 
@@ -1123,7 +1167,7 @@ nav.navbar .navbar-brand.shrink {
 			}
 
 			#work h1 {
-				margin-top: 30px;
+				margin-top: 95px;
 				font-size: 50px;
 			}
 
@@ -1171,7 +1215,7 @@ nav.navbar .navbar-brand.shrink {
 				margin-left:5px;
 			}
 
-			#work .cancel img{ 	
+			#work .cancel img{
 				width: 16px;
 				height: 16px;
 			}
@@ -1276,7 +1320,7 @@ nav.navbar .navbar-brand.shrink {
 			}
 
 			#work h1 {
-				top: 30%;
+				margin-top: 95px;
 				font-size: 50px;
 			}
 
@@ -1375,7 +1419,7 @@ nav.navbar .navbar-brand.shrink {
 			}
 
 			#work h1 {
-				top: 30%;
+				margin-top: 95px;
 				font-size: 50px;
 			}
 
@@ -1473,6 +1517,7 @@ nav.navbar .navbar-brand.shrink {
 			}
 
 			#work h1 {
+				margin-top: 95px;
 				font-size: 40px;
 			}
 
@@ -1486,26 +1531,26 @@ nav.navbar .navbar-brand.shrink {
 
 			.aboutMeSection {
 				padding: 25px 15px 0px 15px;
-				}
-
-				.aboutMeSectionAlt {
-					padding: 25px 15px 0px 15px;
-				}
-
-				.aboutMe h2{
-					margin: 0px 2px 0px 2px;
-				}
-
-				.aboutMe p{
-					margin-bottom: 0px;
-					padding-bottom: 25px;
-				}
-
-				.aboutMe .frame {
-					text-align: center;
-				}
-
-				#work .pill {
-					margin-left: 30px;
-				}
 			}
+
+			.aboutMeSectionAlt {
+				padding: 25px 15px 0px 15px;
+			}
+
+			.aboutMe h2{
+				margin: 0px 2px 0px 2px;
+			}
+
+			.aboutMe p{
+				margin-bottom: 0px;
+				padding-bottom: 25px;
+			}
+
+			.aboutMe .frame {
+				text-align: center;
+			}
+
+			#work .pill {
+				margin-left: 30px;
+			}
+		}

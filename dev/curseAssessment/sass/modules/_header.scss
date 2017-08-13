@@ -1,0 +1,54 @@
+header {
+	padding-top: 85px;
+	overflow: hidden;
+	.logo {
+		display: inline-block;
+	}
+	.float-right {
+		height: 50px;
+		float: right;
+		.innerWrap {
+			@include vertical-align();
+			& > * {
+				vertical-align: middle;
+				border-radius: 3px;
+				border: 0px;
+				height: 27px;
+				color: #fff;
+			}
+			a, .search {
+				display: inline-block;
+				background-color: #5e84ab;
+				width: 27px;
+				@include transition();
+				&:hover {
+					background-color: #2f4255;
+					@include transition();
+				}
+			}
+			.tw-logo {
+				background-image: url(../curse-fe-challenge/assets/social-icons-sprite.png);
+			}
+			.fb-logo {
+				background-image: url(../curse-fe-challenge/assets/social-icons-sprite.png);
+				background-position: 54px 0px;
+			}
+			.yt-logo {
+				background-image: url(../curse-fe-challenge/assets/social-icons-sprite.png);
+				background-position: 27px 0px;
+			}
+			input {
+				padding-left: 10px;
+				font-size: 13px;
+				margin-left: 5px;
+			}
+			.search {
+				width: 69px;
+				font-size: 13px;
+				font-weight: 600;
+				border: 0;
+				cursor: pointer;
+			}
+		}
+	}
+}
